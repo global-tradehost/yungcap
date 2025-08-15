@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yung FX Capital — Redefining the Prop Firm Standard. Get Instant Funding. No Evaluations. The future of forex and CFD trading starts here.">
+  <meta name="author" content="Yung FX Capital Prop Firm">
+  <meta property="og:title" content="Yung FX Capital | Instant Prop Firm Funding">
+  <meta property="og:description" content="No Evaluations. Just Instant Funding. Up to 95% profit split, fast withdrawals, and unlimited resets.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yungfxcapital.online">
+  <meta property="og:image" content="https://yungfxcapital.online/assets/branding/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Get Started - Yung FX Capital</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  color: #fff;
+}
+
+/* Page Container */
+.signup-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* Left: Signup Form */
+.signup-form-wrapper {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.signup-form-wrapper h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.signup-form-wrapper p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #cccccc;
+}
+
+.signup-form-wrapper .form-group {
+  margin-bottom: 20px;
+}
+
+.signup-form-wrapper label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffffcc;
+}
+
+.signup-form-wrapper input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.signup-form-wrapper input:focus {
+  outline: none;
+  border-color: #8f6fff;
+  box-shadow: 0 0 0 4px rgba(143, 111, 255, 0.3);
+}
+
+.signup-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+  background: #0056cc;
+}
+
+/* Right: Billing Card */
+.billing-glass-card {
+  font-family: 'Inter', sans-serif;
+  padding: 40px;
+  border-radius: 28px;
+  max-width: 980px;
+  background: #007bff;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.billing-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ffffffdd;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.billing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.billing-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.billing-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffffcc;
+}
+
+.billing-form select {
+  appearance: none;
+  width: 100%;
+  padding: 14px 48px 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,0 140,0 70,100' fill='white'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.billing-form select:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.billing-form option {
+  background: #1a1a2e;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.billing-receipt {
+  flex: 1;
+  min-width: 260px;
+  text-align: left;
+}
+
+.label, .labelx {
+  font-size: 16px;
+  font-weight: 600;
+  color: #cccccc;
+}
+
+.price-box {
+  display: flex;
+  align-items: baseline;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.original {
+  text-decoration: line-through;
+  color: #ccc;
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.final {
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.payment-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.pay-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 25px;
+  border: 1px solid #fff;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.pay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .signup-container {
+    flex-direction: column;
+  }
+}
+  </style>
+</head>
+<body>
+     <header class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-lg border border-gray-200 rounded-full shadow-lg px-6 py-2 flex justify-between items-center max-w-6xl w-[95%] z-50" style="box-shadow: 0 0 10px rgba(5, 90, 202, 0.918);">
+  <div class="flex items-center space-x-3">
+    <img src="assets/branding/logo.png" alt="Yung FX Capital Logo" class="h-8 w-auto" style="border-radius: 50%;">
+  </div>
+  <nav class="hidden md:flex space-x-6 text-sm md:text-base font-medium text-black">
+    <a href="#" class="hover:text-brand transition"><b>Get-Started</b></a>
+    <a href="explore.html" class="hover:text-brand transition">Faq</a>
+    <a href="login.html" class="hover:text-brand transition"><b>Community</b></a>
+    <a href="explore.html" class="hover:text-brand transition">Explore</a>
+  </nav>
+  <div class="flex items-center space-x-4">
+    <a href="index.html" class="bg-black text-white px-3 md:px-4 py-1 rounded-full text-xs md:text-sm hover:bg-blue-800 transition">Go To Home <i class="fa fa-sign-in"></i></a>
+  </div>
+</header>
+<br><br><br><br><br><br>
+   <!-- 💸 BILLING SECTION (Glassmorphic) -->
+<div class="signup-container">
+  
+  <!-- LEFT: Signup Form -->
+  <div class="signup-form-wrapper">
+    <h1>Create Your Account</h1>
+    <p>Fill in your details to proceed with your funded account purchase.</p>
+    
+    <form>
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="••••••••">
+      </div>
+    </form>
+  </div>
+
+  <!-- RIGHT: Billing Card -->
+  <section class="billing-glass-card">
+    <h2 class="billing-title">🧾 Confirm Your Funded Account</h2>
+    <div class="billing-grid">
+      <!-- LEFT: Selections -->
+      <div class="billing-form">
+        <div class="form-group">
+          <label for="accountType">Account Type</label>
+          <select id="accountType" onchange="updatePriceAndLinks()">
+            <option value="starter">Starter</option>
+            <option value="standard">Standard</option>
+            <option value="rapid">Rapid</option>
+            <option value="growth">Growth</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="accountCapital">Account Capital</label>
+          <select id="accountCapital" onchange="updatePriceAndLinks()">
+            <option value="1000">$1,000</option>
+            <option value="2500">$2,500</option>
+            <option value="5000">$5,000</option>
+            <option value="10000">$10,000</option>
+            <option value="25000">$25,000</option>
+            <option value="50000">$50,000</option>
+            <option value="100000">$100,000</option>
+            <option value="200000">$200,000</option>
+            <option value="400000">$400,000</option>
+            <option value="800000">$800,000</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- RIGHT: Receipt -->
+      <div class="billing-receipt">
+        <p class="label">Pricing</p>
+        <div id="priceDisplay" class="price-box">
+          <span id="originalPrice" class="original">$0.00</span>
+          <span id="finalPrice" class="final">$0.00</span>
+        </div>
+        <p class="labelx">Choose Payment Option</p>
+        <div class="payment-buttons">
+          <a id="yocoLink" href="#" class="pay-btn yoco">Card Payments</a>
+          <a id="nowPaymentsLink" href="#" class="pay-btn now">Crypto Payments</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<script src="script.js"></script>
+<!-- 🧠 Script: Dynamic Price + Links -->
+<script>
+const priceMap = {
+  starter: {
+    1000: [24.99],
+    2500: [47.99],
+    5000: [82.25],
+    10000: [164.99],
+    25000: [349.75],
+    50000: [99.00, 829.99],
+    100000: [1275.99],
+    200000: [2369.00],
+    400000: [4289.00],
+    800000: [8029.00]
+  },
+  standard: {
+    1000: [37.99],
+    2500: [59.75],
+    5000: [129.99],
+    10000: [197.99],
+    25000: [69.00, 375.99],
+    50000: [875.25],
+    100000: [1475.99],
+    200000: [2689.00],
+    400000: [4729.00],
+    800000: [8379.00]
+  },
+  rapid: {
+    1000: [22.75],
+    2500: [44.99],
+    5000: [79.25],
+    10000: [159.90],
+    25000: [340.45],
+    50000: [668.85],
+    100000: [1240.99],
+    200000: [2205.00],
+    400000: [4107.00],
+    800000: [8019.00]
+  },
+  growth: {
+    1000: [24.99],
+    2500: [47.99],
+    5000: [82.25],
+    10000: [164.99],
+    25000: [349.75],
+    50000: [679.25],
+    100000: [137.00, 1275.99],
+    200000: [2369.00],
+    400000: [4289.00],
+    800000: [8029.00]
+  }
+};
+
+const yocoLinks = {
+  starter: {
+    1000: 'https://pay.yoco.com/r/moYrXP',
+    2500: 'https://pay.yoco.com/r/4aAqKj',
+    5000: 'https://pay.yoco.com/r/2PjxX1',
+    10000: 'https://pay.yoco.com/r/4Zjbro',
+    25000: 'https://pay.yoco.com/r/mOjXLw',
+    50000: 'https://pay.yoco.com/r/2wAZXO',
+    100000: 'https://pay.yoco.com/r/mRjegn',
+    200000: 'https://pay.yoco.com/r/70LOpn',
+    400000: 'https://pay.yoco.com/r/2wAZXR',
+    800000: 'https://pay.yoco.com/r/mzRrOP'
+  },
+  // repeat for other types with dummy links
+  standard: {
+    1000: 'https://pay.yoco.com/r/2Dj19y',
+    2500: 'https://pay.yoco.com/r/2Lj3XP',
+    5000: 'https://pay.yoco.com/r/2pArnw',
+    10000: 'https://pay.yoco.com/r/4jAPbE',
+    25000: 'https://pay.yoco.com/r/2BjXGw',
+    50000: 'https://pay.yoco.com/r/mOjXvM',
+    100000: 'https://pay.yoco.com/r/2wAZ05',
+    200000: 'https://pay.yoco.com/r/4nArKv',
+    400000: 'https://pay.yoco.com/r/71X0de',
+    800000: 'https://pay.yoco.com/r/moYrAY'
+  },
+  rapid: {
+    1000: 'https://pay.yoco.com/r/70LOGD',
+    2500: 'https://pay.yoco.com/r/2bjM6k',
+    5000: 'https://pay.yoco.com/r/4nArBv',
+    10000: 'https://pay.yoco.com/r/4gAYW3',
+    25000: 'https://pay.yoco.com/r/4WjvQR',
+    50000: 'https://pay.yoco.com/r/4Zjbww',
+    100000: 'https://pay.yoco.com/r/mOjprM',
+    200000: 'https://pay.yoco.com/r/7yAxPO',
+    400000: 'https://pay.yoco.com/r/mRj3Xp',
+    800000: 'https://pay.yoco.com/r/2Qj3OD'
+  },
+  growth: {
+    1000: 'https://pay.yoco.com/r/moYrXP',
+    2500: 'https://pay.yoco.com/r/4aAqKj',
+    5000: 'https://pay.yoco.com/r/2PjxX1',
+    10000: 'https://pay.yoco.com/r/4Zjbro',
+    25000: 'https://pay.yoco.com/r/mOjXLw',
+    50000: 'https://pay.yoco.com/r/2wAZXO',
+    100000: 'https://pay.yoco.com/r/mRjegn',
+    200000: 'https://pay.yoco.com/r/70LOpn',
+    400000: 'https://pay.yoco.com/r/2wAZXR',
+    800000: 'https://pay.yoco.com/r/mzRrOP'
+  }
+};
+
+const nowPaymentsLinks  = {
+  starter: {
+    1000: 'https://nowpayments.io/payment/?iid=5607662234',
+    2500: 'https://nowpayments.io/payment/?iid=5106857777',
+    5000: 'https://nowpayments.io/payment/?iid=5155522202',
+    10000: 'https://nowpayments.io/payment/?iid=5133660330',
+    25000: 'https://nowpayments.io/payment/?iid=5815878810',
+    50000: 'https://nowpayments.io/payment/?iid=5402932171',
+    100000: 'https://nowpayments.io/payment/?iid=4745011496',
+    200000: 'https://nowpayments.io/payment/?iid=5455973442',
+    400000: 'https://nowpayments.io/payment/?iid=5321260499',
+    800000: 'https://nowpayments.io/payment/?iid=6238043307'
+  },
+  // repeat for other types with dummy links
+  standard: {
+    1000: 'https://nowpayments.io/payment/?iid=5872847395',
+    2500: 'https://nowpayments.io/payment/?iid=4392935533',
+    5000: 'https://nowpayments.io/payment/?iid=6215158355',
+    10000: 'https://nowpayments.io/payment/?iid=6307164328',
+    25000: 'https://nowpayments.io/payment/?iid=6433784251',
+    50000: 'https://nowpayments.io/payment/?iid=6103688635',
+    100000: 'https://nowpayments.io/payment/?iid=4779388609',
+    200000: 'https://nowpayments.io/payment/?iid=6112664407',
+    400000: 'https://nowpayments.io/payment/?iid=6377359878',
+    800000: 'https://nowpayments.io/payment/?iid=4333882579'
+  },
+  rapid: {
+    1000: 'https://nowpayments.io/payment/?iid=4465011206',
+    2500: 'https://nowpayments.io/payment/?iid=6403429255',
+    5000: 'https://nowpayments.io/payment/?iid=4836604545',
+    10000: 'https://nowpayments.io/payment/?iid=5060478308',
+    25000: 'https://nowpayments.io/payment/?iid=5034969552',
+    50000: 'https://nowpayments.io/payment/?iid=5151169160',
+    100000: 'https://nowpayments.io/payment/?iid=4982425514',
+    200000: 'https://nowpayments.io/payment/?iid=5016499347',
+    400000: 'https://nowpayments.io/payment/?iid=4789171773',
+    800000: 'https://nowpayments.io/payment/?iid=6174840877'
+  },
+  growth: {
+    1000: 'https://nowpayments.io/payment/?iid=6015062518',
+    2500: 'https://nowpayments.io/payment/?iid=4785760568',
+    5000: 'https://nowpayments.io/payment/?iid=4842373534',
+    10000: 'https://nowpayments.io/payment/?iid=5378992794',
+    25000: 'https://nowpayments.io/payment/?iid=5176729139',
+    50000: 'https://nowpayments.io/payment/?iid=5042900698',
+    100000: 'https://nowpayments.io/payment/?iid=5535100992',
+    200000: 'https://nowpayments.io/payment/?iid=6030852354',
+    400000: 'https://nowpayments.io/payment/?iid=6120848010',
+    800000: 'https://nowpayments.io/payment/?iid=4818463999'
+  }
+};
+
+
+function updatePriceAndLinks() {
+  const type = document.getElementById('accountType').value;
+  const cap = parseInt(document.getElementById('accountCapital').value);
+
+  const priceData = priceMap[type][cap];
+  document.getElementById('finalPrice').textContent = `$${priceData[0].toFixed(2)}`;
+  document.getElementById('originalPrice').textContent = priceData[1] ? `$${priceData[1].toFixed(2)}` : '';
+
+  document.getElementById('yocoLink').href = yocoLinks[type][cap];
+  document.getElementById('nowPaymentsLink').href = nowPaymentsLinks[type][cap];
+}
+
+document.addEventListener('DOMContentLoaded', updatePriceAndLinks);
+</script>
+
+</body>
+</html>

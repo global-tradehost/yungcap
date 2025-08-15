@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elite Reward Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Animate glow dot */
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-black flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-xl p-6 rounded-2xl bg-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(0,170,255,0.2)] text-white">
+    <div class="flex justify-between text-lg font-semibold mb-4">
+      <div>Total Rewards</div>
+      <div id="amount" class="text-[#00aaff]">$0</div>
+    </div>
+    <div class="relative w-full h-48">
+      <canvas id="graphCanvas"></canvas>
+      <!-- Glowing pulse dot -->
+      <div id="glowDot" class="absolute w-3 h-3 bg-[#00aaff] rounded-full shadow-[0_0_10px_#00aaff] pointer-events-none" style="top:0; left:0; transform:translate(-50%, -50%); animation: pulse 1.5s infinite;"></div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('graphCanvas');
+    const ctx = canvas.getContext('2d');
+    const glowDot = document.getElementById('glowDot');
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+    const width = canvas.width;
+    const height = canvas.height;
+
+    const duration = 15000; // 15 seconds
+    const fps = 60;
+    const totalFrames = Math.floor(duration / (1000 / fps));
+    const maxAmount = 2500000;
+
+    // Bezier curve smoothing helper
+    function smoothLine(ctx, points) {
+      ctx.beginPath();
+      ctx.moveTo(0, points[0]);
+
+      for (let i = 1; i < points.length - 2; i++) {
+        let xc = (i + 1 + i) / 2 * (width / totalFrames);
+        let yc = (points[i] + points[i + 1]) / 2;
+        ctx.quadraticCurveTo(i * (width / totalFrames), points[i], xc, yc);
+      }
+
+      ctx.lineTo(width, points[points.length - 1]);
+    }
+
+    const points = [];
+    let prev = height - 30;
+
+    for (let i = 0; i <= totalFrames; i++) {
+      let baseStep = (i / totalFrames);
+      let volatility = 40 - (baseStep * 30);
+      let noise = (Math.random() - 0.5) * volatility;
+      let newY = prev - noise;
+      newY = Math.max(20, Math.min(height - 20, newY));
+      points.push(newY);
+      prev = newY;
+    }
+
+    let frame = 0;
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Fill
+      ctx.beginPath();
+      ctx.moveTo(0, height);
+      for (let i = 0; i <= frame; i++) {
+        const x = (i / totalFrames) * width;
+        const y = points[i];
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo((frame / totalFrames) * width, height);
+      ctx.closePath();
+
+      const gradient = ctx.createLinearGradient(0, 0, 0, height);
+      gradient.addColorStop(0, 'rgba(0,170,255,0.2)');
+      gradient.addColorStop(1, 'rgba(0,170,255,0)');
+      ctx.fillStyle = gradient;
+      ctx.fill();
+
+      // Smooth bezier curve
+      ctx.strokeStyle = '#00aaff';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Update counter
+      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+      const progress = easeOut(frame / totalFrames);
+      const amount = Math.floor(progress * maxAmount);
+      document.getElementById('amount').textContent = '$' + amount.toLocaleString();
+
+      // Move glow dot
+      const glowX = (frame / totalFrames) * width;
+      const glowY = points[frame];
+      glowDot.style.left = glowX + 'px';
+      glowDot.style.top = glowY + 'px';
+
+      if (frame < totalFrames) {
+        frame++;
+        requestAnimationFrame(draw);
+      }
+    }
+
+    draw();
+  </script>
+</body>
+</html>
