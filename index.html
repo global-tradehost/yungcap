@@ -1,0 +1,3383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Basic Meta -->
+  <meta name="description" content="Yung FX Capital — Redefining the Prop Firm Standard. Get Instant Funding. No Evaluations. The future of forex and CFD trading starts here.">
+  <meta name="author" content="Yung FX Capital Prop Firm">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Yung FX Capital | Instant Prop Firm Funding">
+  <meta property="og:description" content="No Evaluations. Just Instant Funding. Up to 95% profit split, fast withdrawals, and unlimited resets.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yungfxcapital.online">
+  <meta property="og:image" content="https://yungfxcapital.online/assets/branding/logo.png">
+  <meta property="og:site_name" content="Yung FX Capital">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yung FX Capital | Instant Prop Firm Funding">
+  <meta name="twitter:description" content="No Evaluations. Just Instant Funding. Up to 95% profit split, fast withdrawals, and unlimited resets.">
+  <meta name="twitter:image" content="https://yungfxcapital.online/assets/branding/logo.png">
+  <meta name="twitter:url" content="https://yungfxcapital.online">
+
+  <title>Yung FX Capital - Rising Prop Firm For Real Traders</title>
+
+  <!-- Favicon  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- End Head -->
+  </head>
+ <!-- Preloader -->
+<div id="preloader" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 145, 241, 0.808);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  color: white;
+  font-family: 'Arial', sans-serif;
+">
+  <div style="font-size: 40px; font-weight: bold;" id="loader-percentage">0%</div>
+  <div style="margin-top: 10px; font-size: 16px; letter-spacing: 1px;">Initializing Capital Engines...</div>
+</div>
+
+<script>
+  let count = 0;
+  const loader = document.getElementById("loader-percentage");
+  const preloader = document.getElementById("preloader");
+
+  const interval = setInterval(() => {
+    count++;
+    loader.textContent = count + "%";
+    if (count >= 100) {
+      clearInterval(interval);
+      hidePreloader();
+    }
+  }, 30); // Fast digital loading
+
+  function hidePreloader() {
+    preloader.style.opacity = "0";
+    setTimeout(() => preloader.style.display = "none", 1200);
+  }
+
+  // Failsafe: Remove after 12 seconds max no matter what
+  setTimeout(() => {
+    if (preloader.style.display !== "none") {
+      clearInterval(interval);
+      hidePreloader();
+    }
+  }, 5000);
+</script>
+
+  <body class="relative bg-white text-gray-900">
+  <header class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-lg border rounded-full shadow-lg px-6 py-2 flex justify-between items-center max-w-6xl w-[95%] z-50">
+  <div class="flex items-center space-x-3">
+    <img src="assets/branding/logo.png" alt="Yung FX Capital Logo" class="h-8 w-auto" style="border-radius: 50%;">
+    <h1 class="text-l md:text-1xl font-bold text-brand">Yung FX Capital</h1>
+  </div>
+  <nav class="hidden md:flex space-x-6 text-sm md:text-base font-medium">
+    <a href="get-started.html" class="hover:text-brand transition"><b>Get-Started</b></a>
+    <a href="#get-started" class="hover:text-brand transition">Pricing</a>
+    <a href="login.html" class="hover:text-brand transition"><b>Community</b></a>
+    <a href="explore.html" class="hover:text-brand transition">Explore</a>
+  </nav>
+  <div class="flex items-center space-x-4">
+  <a href="support.html" class="flex items-center space-x-1">
+  <img src="assets/images/support.png" alt="Customer Support" class="h-6 w-6">
+  <i class="fas fa-chevron-down text-xs text-black"></i>
+</a>
+  <a href="login.html" class="bg-black text-white px-3 md:px-4 py-1 rounded-full text-xs md:text-sm hover:bg-blue-800 transition">
+    Login <i class="fa fa-sign-in"></i>
+  </a>
+</div>
+  </header>
+  <br><br><br><br>
+<section class="main-hero elite-hero">
+  <div class="hero-overlay"></div>
+  <div class="main-hero-content">
+    <h1 class="main-title">Yung FX Capital</h1>
+    <p class="main-subtitle">Rising Prop Firm For Traders To Get Funded Instantly</p>
+    <p class="main-description">
+     Unlock instant access up to $400K worth of capital with unlimited free resets.
+    </p>
+    <div class="hero-buttons">
+      <a href="login.html" class="hero-btn login">Login <i class="fas fa-sign-in-alt"></i></a>
+      <a href="get-started.html" class="hero-btn signup">Sign Up Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Glassmorphic Discount Card (Desktop Only) -->
+<div id="floatingCard" class="glowing-border hidden lg:flex fixed top-24 left-6 z-50 w-72 p-5 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.08)] backdrop-blur-md bg-gradient-to-br from-white via-blue-50 to-blue-100 backdrop-blur-xl border border-black/10 text-gray-900 transition-opacity duration-700">
+  <div class="space-y-3">
+    <h2 class="text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-black to-blue-400 bg-clip-text text-transparent">$10,000 USD</h2>
+    <p class="text-2xl font-extrabold text-gray-900">$16.99 
+      <span class="text-sm font-bold text-gray-600"> Special Offer</span>
+    </p>
+
+    <ul class="text-sm text-gray-700 list-disc list-inside leading-relaxed space-y-1">
+      <li>Instant Funding</li>
+      <li>25% Overall Drawdown</li>
+      <li>10% Daily Drawdown</li>
+      <li>No Target Required</li>
+      <li>Unlimited Time</li>
+      <li>FREE Resets</li>
+      <li>Payout-On-Demand</li>
+      <li>...and more</li>
+    </ul>
+
+    <div class="flex flex-col gap-2 pt-3">
+      <a href="https://nowpayments.io/payment/?iid=4989935548" target="_blank" rel="noopener">
+        <button class="flex items-center justify-center gap-2 bg-gradient-to-br from-white via-[#00aaff]/5 to-[#00aaff]/10 backdrop-blur-xl border border-black/10 transition rounded-xl py-2 font-semibold w-full text-gray-900 hover:shadow-lg">
+          <img src="assets/images/payCrypto.png" alt="Crypto Icon" class="w-5 h-5" />
+          Pay With Crypto
+        </button>
+      </a>
+      <a href="https://pay.yoco.com/r/4xAeB5" target="_blank" rel="noopener">
+        <button class="flex items-center justify-center gap-2 bg-gradient-to-br from-white via-blue-50 to-blue-100 backdrop-blur-xl border border-black/10 transition rounded-xl py-2 font-semibold w-full text-gray-900 hover:shadow-lg">
+          <img src="assets/images/payCard.png" alt="Card Icon" class="w-5 h-5" />
+          Pay With Card
+        </button>
+      </a>
+    </div>
+
+    <p class="text-xs text-gray-500 pt-2">Daily Limited Offer</p>
+  </div>
+</div>
+
+
+<!-- Floating MT5 Card -->
+<div id="mt5Card" class="fixed right-4 bottom-20 sm:bottom-24 z-50 transition-opacity duration-500 ease-in-out opacity-100">
+  <div class="glowing-border flex items-center gap-3  bg-white/80 backdrop-blur-lg border border-white/10 rounded-full shadow-lg px-4 py-2">
+    <img src="assets/images/mt5.png" alt="MT5 Icon" class="w-6 h-6" />
+    <span class="text-black font-semibold text-sm">MT5 is available</span>
+  </div>
+</div>
+
+<section class="relative z-10 px-4 sm:px-8 py-24 bg-white text-gray-900 overflow-hidden">
+  <!-- Sponsor Row -->
+ <div class="flex justify-center items-center gap-10 flex-wrap mb-16 relative z-10">
+    <img src="assets/images/nas1-modified.png" alt="Sponsor" 
+         class="h-12 object-contain invert hover:invert-0 transition duration-300" />
+    <img src="assets/images/ma-wa2-modified.png" alt="Sponsor" 
+         class="h-12 object-contain invert hover:invert-0 transition duration-300" />
+    <img src="assets/images/bez1-modified.png" alt="Sponsor" 
+         class="h-12 object-contain invert hover:invert-0 transition duration-300" />
+    <img src="assets/images/yah1-modified.png" alt="Sponsor" 
+         class="h-12 object-contain invert hover:invert-0 transition duration-300" />
+</div>
+
+
+  <!-- Background Glow Blobs -->
+  <div class="absolute -center-40 -left-20 w-[400px] h-[400px] bg-blue-500/10 blur-3xl rounded-full animate-pulse"></div>
+  <div class="absolute top-40 right-[-200px] w-[500px] h-[500px] bg-purple-600/10 blur-3xl rounded-full animate-pulse"></div>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 relative z-10">
+    <!-- Rewards Card -->
+    <div class="glowing-border lg:col-span-2 flex flex-col bg-gradient-to-br from-white via-blue-50 to-blue-100 backdrop-blur-xl border border-black/10 rounded-3xl p-10 shadow-[0_0_30px_rgba(0,0,0,0.05)]">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 via-black to-blue-400 bg-clip-text text-transparent">
+          Total Rewards
+        </h2>
+        <span id="amount" class="text-2xl font-bold text-[#00aaff] drop-shadow-lg">$0</span>
+      </div>
+
+      <!-- Graph Area -->
+      <div class="relative w-full h-[220px] sm:h-[260px] md:h-[320px] lg:h-[420px] xl:h-full">
+        <canvas id="graphCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
+        <div id="glowDot" class="absolute w-3 h-3 bg-[#00aaff] rounded-full shadow-[0_0_10px_#00aaff] pointer-events-none" style="top:0; left:0; transform:translate(-50%, -50%); animation: pulse 1.5s infinite;"></div>
+      </div>
+    </div>
+
+    <!-- Feature Columns -->
+    <div class="flex flex-col gap-10">
+      <div class="bg-gradient-to-br from-white via-blue-50 to-blue-100 backdrop-blur-xl border border-black/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition duration-500 flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-black to-blue-400 bg-clip-text text-transparent mb-4">Industry Leading Features</h3>
+          <ul class="space-y-3 text-gray-900 text-lg">
+            <li><i class="fas fa-bolt text-blue-500 mr-2"></i><span class="font-semibold">Up To 50% Drawdown</span></li>
+            <li><i class="fas fa-bullseye text-blue-500 mr-2"></i><span class="font-semibold">100% Profit Split</span></li>
+            <li><i class="fas fa-sync text-blue-500 mr-2"></i><span class="font-semibold">Instant Live Capital</span></li>
+            <li><i class="fas fa-redo-alt text-blue-500 mr-2"></i><span class="font-semibold">Unlimited Free Resets</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="glowing-border bg-white/60 backdrop-blur-xl border border-black/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition duration-500 flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-black to-blue-400 bg-clip-text text-transparent mb-4">Traders Worldwide</h3>
+          <p class="text-2xl font-semibold text-[#00aaff]">37,000+</p>
+        </div>
+        <img src="https://cdn.prod.website-files.com/66dfd301f582ed13bfe5e807/67f7954a872181730584fa3d_traders-globally-37.svg" alt="Traders Global" class="mt-6 w-full rounded-xl">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Brand Header -->
+<section class="mt-24 px-4 text-center" style="margin-bottom: 25px;">
+  <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-black to-blue-500 bg-clip-text text-transparent bg-clip-text drop-shadow-md">
+   Our Limited Offers
+  </h1>
+  <p class="text-lg md:text-xl font-medium text-black-300 mt-3">
+    Get Flexible Discount Opportunities.
+  </p>
+</section>
+        <section class="promo-pricing relative z-10 px-4 sm:px-8 py-24 overflow-hidden" style="margin-top: -50px !important;">
+        <div class="promo-pricing__container">
+        <div class="promo-pricing__left">
+        <div class="promo-pricing__tabs">
+        <button class="promo-pricing__tab" data-tab="tab-25k">$25K Standard</button>
+        <button class="promo-pricing__tab" data-tab="tab-50k">$50K Starter</button>
+        <button class="promo-pricing__tab active" data-tab="tab-100k">$100K Growth</button>
+      </div>
+      <div class="promo-pricing__cards bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl">
+        <div class="glowing-border promo-pricing__card bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl" id="tab-25k">
+          <div class="brics-header-section">
+            <div style="display: flex; align-items: center;">
+              <h3 class="brics-title" style="font-size: 25px; margin: 0;">$25,000 USD</h3>
+            </div>
+            </div>
+          <ul>
+            <li class="brics-title" style="font-size: 18px; margin: 0;">Account Features:</li>
+            <li>
+               Unlimited Free Resets  <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="You eligble for a free reset after 12 days of from the date of suspension." onclick="window.location.href='explore.html';"></i>
+               </li>
+            <li>Profit Target: <b  style="color: #007bff;">Not Required</b></li>
+            <li>
+              Maximum Daily Loss: <b style="color: #007bff;">25%</b></li>
+            <li>
+              Maximum Overall Loss: <b style="color: #007bff;">50%</b></li>
+            <li>
+              Equity Based Drawdown
+              <i class="fa fa-info-circle"  style="color: #037dff;" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed." onclick="window.location.href='explore.html';"></i>
+            </li>
+            <li>Minimum Trading Days: <b style="color: #007bff;">5 Days</b></li>
+            <li>
+              Profit Split:<b> Up To 100%</b>
+              <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively." onclick="window.location.href='explore.html';"></i>
+            </li>
+            <li>
+              Payout Cycle: 
+              <b style="color: #007bff;">7-Day Weekly</b></li>
+            </ul>
+          <div class="divider">
+            <hr />
+            <span>Price: $69 USD<br><a style="color: #007bff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
+            <hr />
+          </div>
+          <a href="get-started.html" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">Get Started</a>
+        </div>
+        <div class="glowing-border promo-pricing__card bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl" id="tab-50k">
+          <div class="brics-header-section">
+            <div style="display: flex; align-items: center;">
+              <h3 class="brics-title" style="font-size: 25px; margin: 0;">$50,000 USD</h3>
+            </div>
+            </div>
+          <ul>
+            <li class="brics-title" style="font-size: 18px; margin: 0;">Account Features:</li>
+            <li>
+               Unlimited Free Resets  <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="You eligble for a free reset after 12 days of from the date of suspension." onclick="window.location.href='explore.html';"></i>
+               </li>
+            <li>Profit Target: <b style="color: #007bff;">Not Required</b></li>
+            <li>
+              Maximum Daily Loss: <b  style="color: #007bff;">10%</b></li>
+            <li>
+              Maximum Overall Loss: <b style="color: #007bff;">25%</b></li>
+            <li>
+              Equity Based Drawdown
+              <i class="fa fa-info-circle"  style="color: #037dff;" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed." onclick="window.location.href='explore.html';"></i>
+            </li>
+            <li>Minimum Trading Days: <b style="color: #007bff;">5 Days</b></li>
+            <li>
+              Profit Split:<b> Up To 90%</b>
+              <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively." onclick="window.location.href='explore.html';"></i>
+            </li>
+            <li>
+              Payout Cycle: 
+              <b  style="color: #007bff;">7-Day Weekly</b></li>
+            </ul>
+          <div class="divider">
+            <hr />
+            <span>Price: $99 USD<br><a style="color: #007bff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
+            <hr />
+          </div>
+          <a href="get-started.html" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">Get Started</a>
+        </div>
+        <div class="glowing-border promo-pricing__card active bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl" id="tab-100k">
+          <div class="brics-header-section">
+            <div style="display: flex; align-items: center;">
+              <h3 class="brics-title" style="font-size: 25px; margin: 0;">$100,000 USD</h3>
+            </div>
+            </div>
+          <ul>
+            <li class="brics-title" style="font-size: 18px; margin: 0;">Account Features:</li>
+            <li>
+               Unlimited Free Resets  <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="You eligble for a free reset after 12 days of from the date of suspension." onclick="window.location.href='explore.html';"></i>
+               </li>
+            <li>Profit Target: <b style="color: #007bff;">Not Required</b></li>
+            <li>
+              Maximum Daily Loss: <b style="color: #007bff;">12%</b></li>
+            <li>
+              Maximum Overall Loss: <b style="color: #007bff;">30%</b></li>
+            <li>
+              Equity Based Drawdown
+              <i class="fa fa-info-circle"  style="color: #037dff;" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed." onclick="window.location.href='explore.html';"></i>
+            </li>
+            <li>Minimum Trading Days: <b style="color: #007bff;">10 Days</b></li>
+            <li>
+              Profit Split:<b> Up To 100%</b>
+              <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively." onclick="window.location.href='explore.html';"></i>
+            </li>
+            <li>
+              Payout Cycle: 
+              <b style="color: #007bff;">Bi-weekly</b></li>
+            </ul>
+          <div class="divider">
+            <hr />
+            <span>Price: $137 USD<br><a style="color: #007bff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
+            <hr />
+          </div>
+          <a href="get-started.html" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">Get Started</a>
+        </div>
+      </div>
+      <div class="promo-pricing__info-card bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl">
+        <h4><b>Choose Preffered Trading Plan</b></h4>
+        <p>All accounts come with instant access, no evaluations, plus unlimited resets feature. Make your trading journey smoother and smarter with Yung FX Capital by growing rapid with enough risk-protection exposure.</p>
+      </div>
+    </div> 
+    <div class="promo-pricing__right">
+     <!-- Sidebar Features + Video -->
+   <div class="lg:col-span-5 space-y-10">
+  <div class="p-6 bg-gradient-to-br from-white via-blue-50 to-blue-100 backdrop-blur-xl border border-black/10 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.05)]">
+    <h3 class="text-xl font-semibold tracking-tight bg-gradient-to-r from-blue-600 via-black to-blue-400 bg-clip-text text-transparent mb-4">#1 Traders Choice</h3>
+    <ul class="space-y-3 text-gray-800">
+      <li><i class="fas fa-wallet text-blue-500 mr-2"></i> <b>Payout-On-Demand - 0% Delays</b></li>
+      <li><i class="fas fa-sync-alt text-blue-500 mr-2"></i> <b>Get Unlimited Free Resets</b></li>
+      <li><i class="fas fa-tachometer-alt text-blue-500 mr-2"></i> <b>Fast Execution Both MT4/MT5</b></li>
+      <li><i class="fas fa-percent text-blue-500 mr-2"></i> <b>Zero Spreads - No Commission</b></li>
+    </ul>
+    <div class="mt-6 text-center p-4 border border-black/10 rounded-xl bg-gradient-to-br from-white via-blue-50 to-blue-100 backdrop-blur-xl">
+      <h4 class="text-lg font-medium text-gray-900 mb-2">Special Discounts End In:</h4>
+      <div id="promo-pricing__timer" class="text-xl font-mono bg-gradient-to-r from-blue-600 via-black to-cyan-500 text-transparent bg-clip-text animate-pulse"></div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="promo-pricing__video-wrapper">
+  <img src="assets/images/preview.png" alt="Dashboard Preview" class="promo-pricing__image" />
+  <a href="explore.html" class="px-3 py-2 sm:px-6 sm:py-3 hero-btn login">
+    Explore <i class="fa fa-compass me-2"></i>
+  </a>
+</div>
+
+    </div>
+  </div>
+</section>
+<style>
+.promo-pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background: transparent;
+}
+.promo-pricing__container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.promo-pricing__left, .promo-pricing__right {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.promo-pricing__tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.promo-pricing__tab {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  color: #000;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border-radius: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
+}
+.promo-pricing__tab.active {
+  border: none;
+  background: linear-gradient(to right, #00cfff, #005eff);
+  color: #fff;
+  box-shadow: 0 0 25px rgba(0, 204, 255, 0.35);
+}
+@media (max-width: 768px) {
+  .promo-pricing__tab {
+    padding: 0.4rem 0.5rem;
+    font-size: 12px;
+    border-radius: 12px;
+  }
+}
+.promo-pricing__cards > div {
+  display: none;
+  color: #000;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  padding: 1.5rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.promo-pricing__cards > div.active {
+  display: block;
+}
+.promo-pricing__cards > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+.promo-pricing__purchase-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 204, 255, 0.25);
+}
+.promo-pricing__purchase-btn:hover {
+  background: #f0f0f0;
+  color: #000;
+  transform: translateY(-2px);
+}
+.promo-pricing__info-card {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  border-radius: 14px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.promo-pricing__info-card h4 {
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.promo-pricing__info-card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.promo-pricing__features ul {
+  list-style: none;
+  padding: 0;
+}
+.promo-pricing__features ul li {
+  margin-bottom: 0.7rem;
+  position: relative;
+  padding-left: 1.8rem;
+  color: #000;
+}
+.promo-pricing__features ul li:before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #5628ee;
+  font-size: 1.1rem;
+}
+.promo-pricing__countdown {
+  margin-top: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.85);
+  color: #000;
+  padding: 1rem;
+  border-radius: 25px;
+  backdrop-filter: blur(14px);
+}
+.promo-pricing__countdown h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+#promo-pricing__timer {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-family: monospace;
+  background: linear-gradient(90deg, #2ec4ff, #005eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3.5s infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgb(5, 105, 255);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+}
+.promo-pricing__video-wrapper {
+  position: relative;
+  margin-top: 1rem;
+}
+.promo-pricing__image {
+  width: 75%;
+  border-radius: 15px;
+  pointer-events: none;
+}
+.promo-pricing__learn-more {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #f5f5f5;
+  color: #000;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.promo-pricing__learn-more:hover {
+  background: #e0e0e0;
+}
+@media (max-width: 768px) {
+  .promo-pricing__container {
+    flex-direction: column;
+  }
+  .promo-pricing__left, .promo-pricing__right {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 489px) {
+  .promo-pricing__image {
+    width: 100%;
+  }
+}
+</style>
+
+<!-- Brand Header -->
+<section class="mt-24 px-4 text-center">
+  <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-black to-blue-500 bg-clip-text text-transparent bg-clip-text drop-shadow-md">
+    Our Brand Promise!
+  </h1>
+  <p class="text-lg md:text-xl font-medium text-black-300 mt-3">
+    Discover unmatched advantages for funded traders.
+  </p>
+</section>
+
+<!-- Comparison Table (Light Version) -->
+<div class="mt-14 px-4 md:px-12 fade-in">
+  <div class="overflow-auto rounded-3xl bg-gradient-to-br from-white via-blue-50 to-blue-100 backdrop-blur-lg border border-black/10 shadow-[0_0_10px_2px_rgba(0,0,0,0.05)] p-6 md:p-10 transition-all duration-500 ease-in-out">
+    <table class="min-w-[750px] w-full text-gray-900 text-left">
+      <thead>
+        <tr class="text-sm md:text-base tracking-tight bg-gradient-to-r from-blue-600 via-black to-blue-400 bg-clip-text text-transparent uppercase tracking-wide border-b border-black/10">
+          <th class="py-4 px-3 font-semibold">Trader's Value</th>
+          <th class="py-4 px-3 font-semibold text-gray-900 relative">
+            <span class="bg-gradient-to-r from-purple-600 to-indigo-600 px-3 py-1 rounded-lg shadow-lg ring-1 ring-purple-700/50 text-white">
+              Yung FX Capital
+            </span>
+          </th>
+          <th class="py-4 px-3 font-semibold">FTMO</th>
+          <th class="py-4 px-3 font-semibold">FundedNext</th>
+          <th class="py-4 px-3 font-semibold">Audacity Capital</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-black/10 text-sm md:text-base">
+        <!-- Row Template -->
+        <tr class="hover:bg-black/5 transition duration-300">
+          <td class="py-4 px-3 text-gray-700">Instant Live Capital</td>
+          <td class="py-4 px-3 font-bold text-green-600">✔</td>
+          <td class="py-4 px-3 text-red-500">❌</td>
+          <td class="py-4 px-3 text-red-500">❌</td>
+          <td class="py-4 px-3 text-red-500">❌</td>
+        </tr>
+        <tr class="hover:bg-black/5 transition duration-300">
+          <td class="py-4 px-3 text-gray-700">Unlimited Free Resets</td>
+          <td class="py-4 px-3 font-bold text-green-600">✔</td>
+          <td class="py-4 px-3 text-red-500">❌</td>
+          <td class="py-4 px-3 text-red-500">❌</td>
+          <td class="py-4 px-3 text-red-500">❌</td>
+        </tr>
+        <tr class="hover:bg-black/5 transition duration-300">
+          <td class="py-4 px-3 text-gray-700">Account Options</td>
+          <td class="py-4 px-3 text-purple-700">Multiple (Flexible)</td>
+          <td class="py-4 px-3 text-gray-500">Fixed Sizes</td>
+          <td class="py-4 px-3 text-gray-500">Fixed Sizes</td>
+          <td class="py-4 px-3 text-gray-500">Fixed Sizes</td>
+        </tr>
+        <tr class="hover:bg-black/5 transition duration-300">
+          <td class="py-4 px-3 text-gray-700">Maximum Drawdown</td>
+          <td class="py-4 px-3 font-semibold text-blue-600">50%</td>
+          <td class="py-4 px-3 text-gray-900">8%</td>
+          <td class="py-4 px-3 text-gray-900">10%</td>
+          <td class="py-4 px-3 text-gray-900">10%</td>
+        </tr>
+        <tr class="hover:bg-black/5 transition duration-300">
+          <td class="py-4 px-3 text-gray-700">Scaling Plan</td>
+          <td class="py-4 px-3 font-bold text-green-600">✔</td>
+          <td class="py-4 px-3 text-green-600">✔</td>
+          <td class="py-4 px-3 text-green-600">✔</td>
+          <td class="py-4 px-3 text-red-500">❌</td>
+        </tr>
+        <tr class="hover:bg-black/5 transition duration-300">
+          <td class="py-4 px-3 text-gray-700">Profit Split</td>
+          <td class="py-4 px-3 font-bold text-yellow-500">100%</td>
+          <td class="py-4 px-3 text-gray-900">80%</td>
+          <td class="py-4 px-3 text-gray-900">85%</td>
+          <td class="py-4 px-3 text-gray-900">95%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+ 
+<div class="brics-header-section" style="margin-top: 100px;">
+<h1 class="brics-title">The Premium Experience <i class="fas fa-bolt text-blue-400 mr-2"></i></h1>
+</div>
+	  <!-- Tabs Container -->
+	  <div class="tabs-container relative z-10 px-4 sm:px-8 py-24 overflow-hidden" id="get-started" style="margin-top: -100px; margin-bottom: -90px;">
+      <!-- Top tab that is always active -->
+      <div class="top-tab"><b>Choose Preferred Account</b></div>
+    <!-- Background Glow Blobs -->
+<div class="z-0 pointer-events-none absolute -center-40 -left-20 w-[300px] h-[400px] bg-blue-500/20 blur-2xl rounded-full animate-pulse"></div>
+<div class="z-0 pointer-events-none absolute bottom-40 right-[-200px] w-[300px] h-[300px] bg-purple-600/20 blur-2xl rounded-full animate-pulse"></div>
+
+      <!-- Middle tabs for trading styles -->
+      <p style="color:#000000; font-size:12px; text-align:center; margin-top: 5px;">Choose Live Account: <a href="explore.html" style="font-weight: bold; color:#0481fd;">Learn More <i class="fa fa-info-circle" aria-hidden="true" title="Choose preferred account type, ensure to read account specifications."></i>
+      </a></p>
+      <div class="middle-tabs">
+        <div class="tab" data-tab="scalping" style="margin-bottom: 8px; box-shadow: 0px 0px 5px 0px rgb(0, 153, 255);">Starter</div>
+        <div class="tab" data-tab="day" style="margin-bottom: 8px; box-shadow: 0px 0px 5px 0px rgb(0, 153, 255);">Standard</div>
+        <div class="tab active" data-tab="swing" style="margin-bottom: 8px; box-shadow: 0px 0px 5px 0px rgb(0, 153, 255);">Rapid</div>
+        <div class="tab" data-tab="position" style="margin-bottom: 8px; box-shadow: 0px 0px 5px 0px rgb(0, 153, 255);">Growth</div>
+      </div>
+    
+      <!-- Bottom fixed tabs for Metatrader options -->
+      <p style="color:#000000; font-size:12px; text-align:center;">Select Live MT-Server:</p>
+      <div class="bottom-tabs">
+        <div class="bottom-tab selected" data-tab="mt4" style="box-shadow: 0px 0px 5px 0px rgb(0, 153, 255);">Metatrader 4</div>
+        <div class="bottom-tab" data-tab="mt5" style="box-shadow: 0px 0px 5px 0px rgb(0, 153, 255);">Metatrader 5</div>
+      </div>
+    
+      <!-- Content Sections for middle tabs -->
+      <div id="scalping" class="content" style="display: none;">
+        <div class="funding-price-cards">
+          <div class="pricing-container">
+                          <div class="pricing-card" style="box-shadow: 0px 0px 5px 0px rgb(0, 153, 255) !important;">
+            <div class="card-header">
+              <h3 class="small-title">Special Discount<span class="mdi mdi-trophy-award"></span></h3>
+              <p class="price">$50,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>10%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 95%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $99 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Section -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Start-Up Account</h3>
+              <p class="price">$1,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>10%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $24.99 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Standard Account</h3>
+              <p class="price">$2,500 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>10%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $47.99 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Intermediate Account</h3>
+              <p class="price">$5,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>10%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $82.25 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Build-Up Account</h3>
+              <p class="price">$10,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>10%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $164.99 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Steller Account</h3>
+              <p class="price">$25,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>10%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $349.75 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Advanced Account</h3>
+              <p class="price">$100,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>10%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $1275.99 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Professional Account</h3>
+              <p class="price">$200,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>10%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $2,369 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Master Account</h3>
+              <p class="price">$400,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>10%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $4,289 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Pro-Master Account</h3>
+              <p class="price">$800,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>10%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $8,029 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <!-- Div class for entire section -->
+          </div>
+          </div>
+      </div>
+      <div id="day" class="content" style="display: none;">
+        <div class="funding-price-cards">
+          <div class="pricing-container">
+                          <div class="pricing-card" style="box-shadow: 0px 0px 5px 0px rgb(0, 153, 255) !important;">
+            <div class="card-header">
+              <h3 class="small-title">Special Discount<span class="mdi mdi-trophy-award"></span></h3>
+              <p class="price">$25,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>50%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $69 USD<br><a onclick="openModal('dayTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Section -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Start-Up Account</h3>
+              <p class="price">$1,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>50%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $37.99 USD<br><a onclick="openModal('dayTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Standard Account</h3>
+              <p class="price">$2,500 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>50%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $59.75 USD<br><a onclick="openModal('dayTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Intermediate Account</h3>
+              <p class="price">$5,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>50%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $129.99 USD<br><a onclick="openModal('dayTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Build-Up Account</h3>
+              <p class="price">$10,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>50%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $197.99 USD<br><a onclick="openModal('dayTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->            
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Rapid Account</h3>
+              <p class="price">$50,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>50%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $875.25 USD<br><a onclick="openModal('dayTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Advanced Account</h3>
+              <p class="price">$100,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>50%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $1475.99 USD<br><a onclick="openModal('dayTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Professional Account</h3>
+              <p class="price">$200,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>50%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $2,689 USD<br><a onclick="openModal('dayTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Master Account</h3>
+              <p class="price">$400,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>50%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $4,729 USD<br><a onclick="openModal('dayTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Pro-Master Account</h3>
+              <p class="price">$800,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>25%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>50%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $8,379 USD<br><a onclick="openModal('dayTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <!-- Div class for entire section -->
+          </div>
+          </div>
+      </div>
+      <div id="swing" class="content" style="display: block;">
+        <div class="funding-price-cards">
+          <div class="pricing-container">
+            <!-- BricsNetwork Pricing Section -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Start-Up Account</h3>
+              <p class="price">$1,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>8%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>20%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $22.75 USD<br><a onclick="openModal('swingTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Standard Account</h3>
+              <p class="price">$2,500 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>8%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+                </li>
+                <li>
+                Maximum Overall Loss: <b>20%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+                </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $44.99 USD<br><a onclick="openModal('swingTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Intermediate Account</h3>
+              <p class="price">$5,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>8%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+                </li>
+                <li>
+                Maximum Overall Loss: <b>20%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+                </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $79.25 USD<br><a onclick="openModal('swingTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Build-Up Account</h3>
+              <p class="price">$10,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>8%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+                </li>
+                <li>
+                Maximum Overall Loss: <b>20%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+                </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>5 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>7-Day Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $159.90 USD<br><a onclick="openModal('swingTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Steller Account</h3>
+              <p class="price">$25,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>8%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+                </li>
+                <li>
+                Maximum Overall Loss: <b>20%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+                </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $340.45 USD<br><a onclick="openModal('swingTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Rapid Account</h3>
+              <p class="price">$50,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>8%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+                </li>
+                <li>
+                Maximum Overall Loss: <b>20%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+                </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $668.85 USD<br><a onclick="openModal('swingTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Advanced Account</h3>
+              <p class="price">$100,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>8%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+                </li>
+                <li>
+                Maximum Overall Loss: <b>20%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+                </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $1240.99 USD<br><a onclick="openModal('swingTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Professional Account</h3>
+              <p class="price">$200,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>8%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+                </li>
+                <li>
+                Maximum Overall Loss: <b>20%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+                </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $2,205 USD<br><a onclick="openModal('swingTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Master Account</h3>
+              <p class="price">$400,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>8%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+                </li>
+                <li>
+                Maximum Overall Loss: <b>20%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+                </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $4,107 USD<br><a onclick="openModal('swingTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Pro-Master Account</h3>
+              <p class="price">$800,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>8%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+                </li>
+                <li>
+                Maximum Overall Loss: <b>20%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+                </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>1 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Payout-On-Demand</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $8,019 USD<br><a onclick="openModal('swingTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <!-- Div class for entire section -->
+          </div>
+          </div>
+      </div>
+      <div id="position" class="content" style="display: none;">
+        <div class="funding-price-cards">
+          <div class="pricing-container">
+                          <div class="pricing-card" style="box-shadow: 0px 0px 5px 0px rgb(0, 153, 255) !important;">
+            <div class="card-header">
+              <h3 class="small-title">Special Discount<span class="mdi mdi-trophy-award"></span></h3>
+              <p class="price">$100,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $137 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Section -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Start-Up Account</h3>
+              <p class="price">$1,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $24.99 USD<br><a onclick="openModal('scalpingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Standard Account</h3>
+              <p class="price">$2,500 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $47.99 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Intermediate Account</h3>
+              <p class="price">$5,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $82.25 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Build-Up Account</h3>
+              <p class="price">$10,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Days</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $164.99 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Steller Account</h3>
+              <p class="price">$25,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $349.75 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Rapid Account</h3>
+              <p class="price">$50,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $679.25 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Advanced Account</h3>
+              <p class="price">$100,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $1275.99 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Professional Account</h3>
+              <p class="price">$200,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $2,369 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Master Account</h3>
+              <p class="price">$400,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $4,289 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <div class="pricing-card">
+            <div class="card-header">
+              <h3 class="small-title">Pro-Master Account</h3>
+              <p class="price">$800,000 USD</p>
+            </div>
+            <hr class="styled-hr" />
+            <div class="card-content">
+              <ul>
+              <li>
+                Instant Live Account 
+                <i class="fa fa-info-circle" aria-hidden="true" title="Skip Trails and demo's and start trading with live/real capital. This helps gives our funded traders an advantage over all traders in various prop firms."></i>
+              </li>
+              <li>Profit Target: <b>Not Required</b></li>
+              <li>
+                Maximum Daily Loss: <b>12%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Daily Loss refers to the amount you are permitted to lose in a single day. The Daily Loss includes results of both open and closed trades."></i>
+              </li>
+              <li>
+                Maximum Overall Loss: <b>30%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="Maximum Loss Limit refers to the total amount your account balance can decrease from the initial balance over the entire trading cycle."></i>
+              </li>
+              <li>
+                Equity Based Drawdown
+                <i class="fa fa-info-circle" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed."></i>
+              </li>
+              <li>Minimum Trading Days: <b>10 Day</b></li>
+              <li>
+                Profit Split:<b>Up To 100%</b>
+                <i class="fa fa-info-circle" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively."></i>
+              </li>
+              <li>Payout Cycle: <b>Bi-Weekly</b></li>
+              </ul>
+            </div>
+            <div class="divider">
+              <hr />
+              <span>Price: $8,029 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <hr />
+            </div>
+            <div class="card-footer">
+              <a href="get-started.html" class="btn">Sign Up!</a>
+            </div>
+            </div>
+            <!-- BricsNetwork Pricing Card End -->
+            <!-- Div class for entire section -->
+          </div>
+          </div>
+      </div>
+      </div> <!-- End Pricing Table -->
+    
+                   
+                   
+        </div>
+        </div>
+  
+      <!-- Modals -->
+        <div id="scalpingModal" class="modal">
+        <div class="modal-content">
+          <button class="close-btn" onclick="closeModal('scalpingModal')">&times;</button>
+          <h2>Starter Account Specifications</h2>
+          <ul class="specs-list">
+            <li><span class="spec-icon">&#x2714;</span> Unlimited Free Resets</li>
+            <li><span class="spec-icon">&#x2714;</span> Weekend Trading: Allowed </li>
+            <li><span class="spec-icon">&#x2714;</span> EA & HTF's: Allowed</li>
+            <li><span class="spec-icon">&#x2714;</span> Account Leverage: 1:100</li>
+            <li><span class="spec-icon">&#x2714;</span> Minimum Withdrawal: +$25 </li>
+            <li><span class="spec-icon">&#x2714;</span> 25K+ Accounts: Payout-On-Demand</li>
+          </ul>
+          <a href="get-started.html" target="_blank" class="learn-more-button">Get Stared</a>
+        </div>
+      </div>
+    
+      <div id="dayTradingModal" class="modal">
+        <div class="modal-content">
+          <button class="close-btn" onclick="closeModal('dayTradingModal')">&times;</button>
+          <h2>Standard Account Specifications</h2>
+          <ul class="specs-list">
+            <li><span class="spec-icon">&#x2714;</span> Unlimited Free Resets</li>
+            <li><span class="spec-icon">&#x2714;</span> Weekend Trading: Allowed </li>
+            <li><span class="spec-icon">&#x2714;</span> EA & HTF's: Allowed</li>
+            <li><span class="spec-icon">&#x2714;</span> Account Leverage: 1:100</li>
+            <li><span class="spec-icon">&#x2714;</span> Minimum Withdrawal: +$25 </li>
+            <li><span class="spec-icon">&#x2714;</span> 25K+ Accounts: Payout-On-Demand</li>
+          </ul>
+          <a href="get-started.html" target="_blank" class="learn-more-button">Get Started</a>
+        </div>
+      </div>
+    
+      <div id="swingTradingModal" class="modal">
+        <div class="modal-content">
+          <button class="close-btn" onclick="closeModal('swingTradingModal')">&times;</button>
+          <h2>Rapid Account Specifications</h2>
+          <ul class="specs-list">
+            <li><span class="spec-icon">&#x2714;</span> Unlimited Free Resets</li>
+            <li><span class="spec-icon">&#x2714;</span> Weekend Trading: Allowed </li>
+            <li><span class="spec-icon">&#x2714;</span> EA & HTF's: Allowed</li>
+            <li><span class="spec-icon">&#x2714;</span> Account Leverage: 1:100</li>
+            <li><span class="spec-icon">&#x2714;</span> Minimum Withdrawal: +$25 </li>
+            <li><span class="spec-icon">&#x2714;</span> 25K+ Accounts: Payout-On-Demand</li>
+          </ul>
+          <a href="get-started.html" target="_blank" class="learn-more-button">Get Started</a>
+        </div>
+      </div>
+    
+      <div id="positionTradingModal" class="modal">
+        <div class="modal-content">
+          <button class="close-btn" onclick="closeModal('positionTradingModal')">&times;</button>
+          <h2>Growth Account Specifications</h2>
+          <ul class="specs-list">
+            <li><span class="spec-icon">&#x2714;</span> Unlimited Free Resets</li>
+            <li><span class="spec-icon">&#x2714;</span> Weekend Trading: Allowed </li>
+            <li><span class="spec-icon">&#x2714;</span> EA & HTF's: Allowed</li>
+            <li><span class="spec-icon">&#x2714;</span> Account Leverage: 1:100</li>
+            <li><span class="spec-icon">&#x2714;</span> Minimum Withdrawal: +$25 </li>
+            <li><span class="spec-icon">&#x2714;</span> 25K+ Accounts: Payout-On-Demand</li>
+          </ul>
+          <a href="get-started.html" target="_blank" class="learn-more-button">Get Started</a>
+        </div>
+      </div>
+
+                  
+    
+      <script>
+        function openModal(modalId) {
+          document.getElementById(modalId).style.display = 'flex';
+        }
+    
+        function closeModal(modalId) {
+          document.getElementById(modalId).style.display = 'none';
+        }
+      </script>
+  
+                            </div>
+                          </div>
+                         
+                       <script>
+    // JavaScript to handle the middle tabs for the trading styles
+    document.querySelectorAll('.middle-tabs .tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+      // Remove active class from all tabs and hide all content sections
+      document.querySelectorAll('.middle-tabs .tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.content').forEach(content => content.style.display = 'none');
+      
+      // Add active class to clicked tab and show corresponding content
+      tab.classList.add('active');
+      const contentId = tab.getAttribute('data-tab');
+      document.getElementById(contentId).style.display = 'block';
+      });
+    });
+    
+    // JavaScript to handle bottom Metatrader tabs highlighting
+    document.querySelectorAll('.bottom-tabs .bottom-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+      // Remove selected class from both Metatrader tabs
+      document.querySelectorAll('.bottom-tabs .bottom-tab').forEach(t => t.classList.remove('selected'));
+      
+      // Add selected class to the clicked Metatrader tab
+      tab.classList.add('selected');
+      });
+    });
+    
+    // JavaScript to handle currency tab selection (6 currency tabs)
+    document.querySelectorAll('.currency-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+      // Remove 'selected' class from all currency tabs
+      document.querySelectorAll('.currency-tab').forEach(t => t.classList.remove('selected'));
+      
+      // Add 'selected' class to the clicked currency tab
+      tab.classList.add('selected');
+      });
+    });
+    </script>
+    
+  <script>
+    document.querySelectorAll(".info-circle").forEach((infoCircle) => {
+    infoCircle.addEventListener("mouseenter", () => {
+      const tooltip = infoCircle.dataset.info;
+      console.log(tooltip); // Optional for debugging
+    });
+  });
+  </script>
+  <script>
+    // Auto-enable horizontal scrolling if needed
+  document.querySelector('.pricing-container').addEventListener('wheel', (e) => {
+    if (e.deltaY !== 0) {
+      e.preventDefault();
+      e.currentTarget.scrollLeft += e.deltaY;
+    }
+  });
+    </script>
+
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="margin-top: 100px; margin-bottom: -25;">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FX:GBPUSD",
+      "title": "GBP/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "OANDA:XAUUSD",
+      "title": "Gold"
+    },
+    {
+      "proName": "OANDA:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "CME_MINI:NQ1!",
+      "title": "Nasdaq100"
+    }
+  ],
+  "colorTheme": "dark",
+  "locale": "en",
+  "largeChartUrl": "",
+  "isTransparent": true,
+  "showSymbolLogo": true
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+
+
+
+<section class="relative py-16 px-4 sm:px-8 md:px-16 bg-white overflow-hidden">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-3">Your Payout Means Our Success!</h2>
+    <p class="text-gray-700 text-lg">At Yung FX Capital it's not just a leaderboard but the wall of fame. Your payout story is our testimony!</p>
+  </div>
+
+  <!-- Ticker -->
+  <div class="mb-10 overflow-hidden">
+    <div class="whitespace-nowrap animate-marquee text-sm font-semibold text-gray-800">
+      <span class="mx-6">💸 William A. just got paid $9,936 (US)</span>
+      <span class="mx-6">💸 Fatima H. - $12,582 (UK)</span>
+      <span class="mx-6">💸 Chihiro T. - $7,506 (ES)</span>
+      <span class="mx-6">💸 Alejandro T. - $692 (ZA)</span>
+      <span class="mx-6">💸 Zoya R. - $10,791 (CA)</span>
+      <span class="mx-6">💸 Daniel F. - $15,426 (JP)</span>
+      <span class="mx-6">💸 Lucas M. - $4,213 (AU)</span>
+      <span class="mx-6">💸 Amina K. - $8,922 (FR)</span>
+      <span class="mx-6">💸 Noah S. - $3,745 (NZ)</span>
+      <span class="mx-6">💸 Priya D. - $6,319 (IN)</span>
+      <span class="mx-6">💸 Leo G. - $5,188 (DE)</span>
+      <span class="mx-6">💸 Sofia V. - $11,102 (IT)</span>
+      <span class="mx-6">💸 Jamal B. - $9,004 (NG)</span>
+      <span class="mx-6">💸 Chen W. - $13,559 (CN)</span>
+      <span class="mx-6">💸 Andrej K. - $7,827 (RS)</span>
+      <span class="mx-6">💸 Maria P. - $6,050 (PT)</span>
+      <span class="mx-6">💸 Thomas L. - $2,499 (US)</span>
+      <span class="mx-6">💸 Layla N. - $10,200 (AE)</span>
+      <span class="mx-6">💸 Elijah T. - $14,735 (CA)</span>
+      <span class="mx-6">💸 Isabela M. - $8,307 (BR)</span>
+      <span class="mx-6">💸 Ibrahim Y. - $7,124 (SA)</span>
+      <span class="mx-6">💸 Caroline F. - $9,982 (UK)</span>
+      <span class="mx-6">💸 David R. - $11,333 (US)</span>
+      <span class="mx-6">💸 Naomi S. - $12,100 (IL)</span>
+      <span class="mx-6">💸 Khaled M. - $10,876 (EG)</span>
+      <span class="mx-6">💸 Andre L. - $6,918 (CH)</span>
+      <span class="mx-6">💸 Mai N. - $5,607 (VN)</span>
+      <span class="mx-6">💸 Ethan J. - $9,755 (US)</span>
+      <span class="mx-6">💸 Sakura H. - $13,201 (JP)</span>
+      <span class="mx-6">💸 Omar E. - $8,887 (MA)</span>
+      <span class="mx-6">💸 Not seeing your payout? Visit Leaderboard...</span>
+    </div>
+  </div>
+
+  <!-- Grid of Payout Cards -->
+  <div id="payout-grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- Cards injected by JS -->
+  </div>
+
+  <!-- Call to Action -->
+  <div class="text-center mt-16">
+    <h3 class="text-3xl font-extrabold text-gray-900">Want to be featured next?</h3>
+    <p class="text-lg text-gray-700 mt-3">Get funded, trade smart, and earn your place on the Wall of Fame!</p>
+    <a href="login.html" style="margin-top: 20px;" class="inline-block px-3 py-2 sm:px-6 sm:py-3 rounded-full text-base sm:text-lg font-bold bg-gradient-to-r from-indigo-600 via-blue-700 to-indigo-800 text-white shadow-lg hover:scale-105 hover:shadow-xl transform transition duration-300 animate-fadeInUp">See More Payouts</a>
+  </div>
+</section>
+
+<!-- Marquee Animation -->
+<style>
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+}
+</style>
+
+<script>
+  const payouts = [
+    { name: 'Lebo M.', amount: '$112.00', country: '🇿🇦', img: 'assets/certificates/1.png' },
+    { name: 'Amaka E.', amount: '$104.25', country: '🇬🇧', img: 'assets/certificates/7.png' },
+    { name: 'Ayesha K.', amount: '$87.00', country: '🇪🇸', img: 'assets/certificates/11.png' },
+    { name: 'Zinhle M.', amount: '$142.00', country: '🇿🇦', img: 'assets/certificates/4.png' },
+    { name: 'Tunde B.', amount: '$298.00', country: '🇨🇦', img: 'assets/certificates/8.png' },
+    { name: 'Liam T.', amount: '$263.40', country: '🇺🇸', img: 'assets/certificates/12.png' },
+  ];
+
+  const grid = document.getElementById('payout-grid');
+  payouts.forEach(p => {
+    const card = document.createElement('div');
+    card.className = "rounded-xl bg-gradient-to-br from-gray-50 via-blue-50 to-white border border-gray-200 shadow-lg p-5 text-gray-900 hover:scale-105 transform transition duration-300";
+
+    card.innerHTML = `
+      <img src="${p.img}" alt="Payout Certificate" class="w-full h-48 object-cover rounded-lg mb-4 border border-gray-200">
+      <div class="flex justify-between items-center mb-2">
+        <h4 class="text-xl font-bold text-blue-700">${p.name} ${p.country}</h4>
+        <span class="text-blue-700 text-sm bg-blue-50 border border-blue-100 rounded-full px-3 py-1">Processed</span>
+      </div>
+      <p class="text-2xl font-semibold text-gray-900">${p.amount}</p>
+      <p class="text-sm text-gray-600 mt-1">Status: <b>Verified</b> ✔</p>
+    `;
+
+    grid.appendChild(card);
+  });
+</script>
+
+
+<section class="relative py-20 px-4 sm:px-8 md:px-16 bg-white">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-3">Explore Our Account Models</h2>
+    <p class="text-gray-700 text-lg">Choose the model that fits your trading style – learn more about each in detail.</p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="flex justify-center mb-10">
+    <ul class="flex flex-wrap gap-4" id="accountTabs">
+      <li><button class="tab-button active-tab" data-tab="express">Starter</button></li>
+      <li><button class="tab-button" data-tab="rapid">Standard</button></li>
+      <li><button class="tab-button" data-tab="stellar">Rapid</button></li>
+      <li><button class="tab-button" data-tab="myway">Growth</button></li>
+    </ul>
+  </div>
+
+  <!-- Tab Content -->
+  <div id="tabContent" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"></div>
+</section>
+
+<style>
+  .tab-button {
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 2px solid #2F80ED;
+    border-radius: 999px;
+    color: #2F80ED;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  .tab-button:hover, .active-tab {
+    background: #2F80ED;
+    color: white;
+    border-color: #2F80ED;
+  }
+</style>
+
+<script>
+  const models = {
+    express: [
+      { icon: 'fas fa-bolt', label: 'Drawdown Limit', text: '10% Daily / 25% Max' },
+      { icon: 'fas fa-bullseye', label: 'Profit Target', text: 'No Target Required' },
+      { icon: 'fas fa-sync', label: 'Withdrawal Cycle', text: '7-Day Weekly Payouts' },
+      { icon: 'fas fa-redo-alt', label: 'Unlimited Free Reset', text: 'Available After 12 days' },
+    ],
+    rapid: [
+      { icon: 'fas fa-bolt', label: 'Drawdown Limit', text: '25% Daily / 50% Max' },
+      { icon: 'fas fa-bullseye', label: 'Profit Target', text: 'No Target Required' },
+      { icon: 'fas fa-sync', label: 'Withdrawal Cycle', text: '7-Day Weekly Payouts' },
+      { icon: 'fas fa-redo-alt', label: 'Unlimited Free Reset', text: 'Available After 12 days' },
+    ],
+    stellar: [
+      { icon: 'fas fa-bolt', label: 'Drawdown Limit', text: '8% Daily / 20% Max' },
+      { icon: 'fas fa-bullseye', label: 'Profit Target', text: 'No Target Required' },
+      { icon: 'fas fa-sync', label: 'Withdrawal Cycle', text: '7-Day Weekly Payouts' },
+      { icon: 'fas fa-redo-alt', label: 'Unlimited Free Reset', text: 'Available After 12 days' },
+    ],
+    myway: [
+      { icon: 'fas fa-bolt', label: 'Drawdown Limit', text: '12% Daily / 30% Max' },
+      { icon: 'fas fa-bullseye', label: 'Profit Target', text: 'No Target Required' },
+      { icon: 'fas fa-sync', label: 'Withdrawal Cycle', text: '14-Day Bi-Weekly Payouts' },
+      { icon: 'fas fa-redo-alt', label: 'Unlimited Free Reset', text: 'Available After 12 days' },
+    ]
+  };
+
+  function renderTabContent(type) {
+    const container = document.getElementById('tabContent');
+    container.innerHTML = '';
+    models[type].forEach((item) => {
+      const card = document.createElement('div');
+      card.className = 'bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 border border-blue-200 rounded-xl p-6 shadow-lg text-center transform hover:scale-105 transition duration-300';
+      card.innerHTML = `
+        <div class="text-3xl mb-3 text-blue-600"><i class="${item.icon}"></i></div>
+        <h4 class="text-xl font-bold text-gray-900 mb-2">${item.label}</h4>
+        <p class="text-gray-700">${item.text}</p>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active-tab'));
+      btn.classList.add('active-tab');
+      const tab = btn.getAttribute('data-tab');
+      renderTabContent(tab);
+    });
+  });
+
+  renderTabContent('express');
+</script>
+
+<section class="mt-24 px-4 text-center" style="margin-bottom: 25px;">
+  <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-black to-blue-500 bg-clip-text text-transparent bg-clip-text drop-shadow-md">
+   Trade With Flexible Account Types
+  </h1>
+  <p class="text-lg md:text-xl font-medium text-black mt-3">
+    Choose an account that best suits your trading strategy.
+  </p>
+</section>
+<div class="ccontainer addlaterdesktop-hidden">
+<div class="slider">
+  <div class="card-spacer-mobile"></div>
+<!-- Original card -->
+<div class="ccard">
+<div class="ccard-inner">
+<div class="front">
+<img src="https://i.postimg.cc/bNY0VSrn/map.png" class="map-img">
+<div class="crow">
+<img src="https://i.postimg.cc/Zn4PSCL1/chip.png" width="30px">
+<img src="assets/branding/logo-trans.png" width="40px">
+</div>
+<p style="color: #fff;"><b>Starter Accounts</b></p>
+<div class="crow ccard-no">
+<p style="color: #fff;">Instant Live Access</p>
+</div>
+<div class="row ccard-holder">
+<p style="color: #fff;">Up To 50% Max Drawdown</p>
+</div>
+<div class="crow name">
+<p style="color: #fff;">Payout-On-Demand</p>
+<p style="color: #fff;">10/25</p>
+</div>
+</div>
+<div class="back">
+<img src="assets/images/card.png" class="map-img">
+<div class="bar"></div>
+<div class="crow ccard-cvv">
+<div><img src="https://i.postimg.cc/fyCcTD2k/pattern.png"></div>
+<p>824</p>
+</div>
+<div class="crow ccard-text">
+<p style="color: #fff;">Trusted For Traders</p>
+</div>
+<div class="crow signature">
+<p style="color: #fff;">Unlimited Free Resets</p>
+<img src="https://i.postimg.cc/BZBcCBSs/visa.png" width="30px">
+</div>
+</div>
+</div>
+</div>
+
+<!-- Duplicate card 1 -->
+<div class="ccard">
+<div class="ccard-inner">
+<div class="front">
+<img src="https://i.postimg.cc/bNY0VSrn/map.png" class="map-img">
+<div class="crow">
+<img src="https://i.postimg.cc/Zn4PSCL1/chip.png" width="30px">
+<img src="assets/branding/logo-trans.png" width="40px">
+</div>
+<p style="color: #fff;"><b>Standard Accounts</b></p>
+<div class="crow ccard-no">
+<p style="color: #fff;">No Fixed Challenges </p>
+</div>
+<div class="row ccard-holder">
+<p style="color: #fff;">Unlimited Free Resets</p>
+</div>
+<div class="crow name">
+<p style="color: #fff;">Payout-On-Demand</p>
+<p style="color: #fff;">11/26</p>
+</div>
+</div>
+<div class="back">
+<img src="assets/images/card.png" class="map-img">
+<div class="bar"></div>
+<div class="crow ccard-cvv">
+<div><img src="https://i.postimg.cc/fyCcTD2k/pattern.png"></div>
+<p>482</p>
+</div>
+<div class="crow ccard-text">
+<p style="color: #fff;">Expert Guidance</p>
+</div>
+<div class="crow signature">
+<p style="color: #fff;">Priority Resets</p>
+<img src="https://i.postimg.cc/BZBcCBSs/visa.png" width="30px">
+</div>
+</div>
+</div>
+</div>
+
+<!-- Duplicate card 2 -->
+<div class="ccard">
+<div class="ccard-inner">
+<div class="front">
+<img src="https://i.postimg.cc/bNY0VSrn/map.png" class="map-img">
+<div class="crow">
+<img src="https://i.postimg.cc/Zn4PSCL1/chip.png" width="30px">
+<img src="assets/branding/logo-trans.png" width="40px">
+</div>
+<p style="color: #fff;"><b>Rapid Accounts</b></p>
+<div class="crow ccard-no">
+<p style="color: #fff;">Skip Evaluations</p>
+</div>
+<div class="row ccard-holder">
+<p style="color: #fff;">Trade Up To $800K</p>
+</div>
+<div class="crow name">
+<p style="color: #fff;">Payout-On-Demand</p>
+<p style="color: #fff;">09/25</p>
+</div>
+</div>
+<div class="back">
+<img src="assets/images/card.png" class="map-img">
+<div class="bar"></div>
+<div class="crow ccard-cvv">
+<div><img src="https://i.postimg.cc/fyCcTD2k/pattern.png"></div>
+<p>963</p>
+</div>
+<div class="crow ccard-text">
+<p style="color: #fff;">Reliable Support</p>
+</div>
+<div class="crow signature">
+<p style="color: #fff;">Unlimited Potential</p>
+<img src="https://i.postimg.cc/BZBcCBSs/visa.png" width="30px">
+</div>
+</div>
+</div>
+</div>
+
+<!-- Duplicate card 3 -->
+<div class="ccard">
+<div class="ccard-inner">
+<div class="front">
+<img src="https://i.postimg.cc/bNY0VSrn/map.png" class="map-img">
+<div class="crow">
+<img src="https://i.postimg.cc/Zn4PSCL1/chip.png" width="30px">
+<img src="assets/branding/logo-trans.png" width="40px">
+</div>
+<p style="color: #fff;"><b>Growth Accounts</b></p>
+<div class="crow ccard-no">
+<p style="color: #fff;">Keep Up To 100%</p>
+</div>
+<div class="row ccard-holder">
+<p style="color: #fff;">Refund Gauranteed</p>
+</div>
+<div class="crow name">
+<p style="color: #fff;">Payout-On-Demand</p>
+<p style="color: #fff;">08/27</p>
+</div>
+</div>
+<div class="back">
+<img src="assets/images/card.png" class="map-img">
+<div class="bar"></div>
+<div class="crow ccard-cvv">
+<div><img src="https://i.postimg.cc/fyCcTD2k/pattern.png"></div>
+<p>129</p>
+</div>
+<div class="crow ccard-text">
+<p style="color: #fff;">Worldwide Funding</p>
+</div>
+<div class="crow signature">
+<p style="color: #fff;">Enhanced Benefits</p>
+<img src="https://i.postimg.cc/BZBcCBSs/visa.png" width="30px">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<section class="py-20 px-4 sm:px-10 md:px-20 bg-white">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Text Content -->
+    <div>
+      <h2 class="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-700 bg-clip-text text-transparent drop-shadow-md mb-5">
+        Dive Into Hybrid Trading
+      </h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        With <strong>AIS Technology</strong>, you can trade from all around the world through our trusted broker, using different trading platforms.
+        Monitor your trading progress with our trader-friendly dashboard. Our accounts have deep liquidity and fast execution.
+        <strong>ECN spreads</strong> were built for day traders, scalpers, and expert advisors. We offer the best trading environments so you can focus on trading.
+      </p>
+
+      <!-- Cards -->
+      <div class="flex flex-col sm:flex-row gap-6">
+        <div class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 border border-blue-200 p-6 rounded-xl shadow-lg flex-1 text-center hover:scale-105 transition-transform">
+          <div class="text-3xl text-blue-600 mb-3"><i class="fas fa-wave-square"></i></div>
+          <h4 class="text-lg font-bold text-gray-900 mb-1">Lowest Spreads in the Industry</h4>
+        </div>
+        <div class="bg-gradient-to-br from-green-50 via-green-100 to-green-50 border border-green-200 p-6 rounded-xl shadow-lg flex-1 text-center hover:scale-105 transition-transform">
+          <div class="text-3xl text-green-600 mb-3"><i class="fas fa-chart-line"></i></div>
+          <h4 class="text-lg font-bold text-gray-900 mb-1">Spreads Starting From 0.0</h4>
+        </div>
+        <div class="bg-gradient-to-br from-purple-50 via-purple-100 to-purple-50 border border-purple-200 p-6 rounded-xl shadow-lg flex-1 text-center hover:scale-105 transition-transform">
+          <div class="text-3xl text-purple-600 mb-3"><i class="fas fa-signal"></i></div>
+          <h4 class="text-lg font-bold text-gray-900 mb-1">True Market Pricing And Execution</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Side -->
+    <div class="relative rounded-xl overflow-hidden shadow-2xl">
+      <video autoplay muted loop class="w-full rounded-xl">
+        <source src="assets/other/preview.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-xl"></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Connect with CEO Section -->
+<section style="background-color: #fff; padding: 60px 20px;">
+  <div class="ceo-container">
+    <!-- Left / Top -->
+    <div class="ceo-left">
+      <h2 class="ceo-title bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-700 bg-clip-text text-transparent">Connect With Us</h2>
+      <p class="ceo-subtitle text-gray-500">Real leadership. Real presence. Real results.</p>
+      <div class="ceo-glass">
+        <img src="assets/branding/logo-trans.png" alt="CEO Thabiso Pitseng" class="ceo-img" />
+      </div>
+    </div>
+
+    <!-- Right / Bottom -->
+    <div class="ceo-right">
+     <p class="ceo-description text-gray-700">
+    At <strong>Yung FX Capital</strong>, our mission is to empower skilled traders worldwide with the capital, tools, and environment they need to succeed. We believe in transparency, fair opportunities, and a clear path to long-term profitability. Through innovative funding models, robust risk management, and dedicated trader support, we’re building a community where talent thrives and results speak louder than words.
+</p>
+      <div class="ceo-socials">
+        <p class="text-gray-700 font-semibold mb-2">Follow Us:</p>
+        <a href="https://youtube.com/@yungfxcapital?si=1PsfsJc6YMrsTrY7" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://x.com/yungfxcapital?t=wAr3MbV1eAfW3lfLW1JWPQ&s=09" title="X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/yungfxcapital?utm_source=qr&igsh=MWVheXBqMGJ0aTRzMQ==" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61578042659736" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@yungfxcapital?_t=ZM-8yNmSn90M57&_r=1" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.ceo-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left Side */
+.ceo-left {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.ceo-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ceo-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Glassmorphic Image Container */
+.ceo-glass {
+  background: rgba(0, 115, 230, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 115, 230, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+  display: inline-block;
+  animation: fadeIn 2s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.ceo-glass:hover {
+  transform: scale(1.05);
+}
+
+.ceo-img {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* Right Side */
+.ceo-right {
+  flex: 1;
+  min-width: 280px;
+  animation: slideInRight 1s ease-in-out;
+}
+
+.ceo-description {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Social Icons */
+.ceo-socials a {
+  color: #0d6efd;
+  font-size: 22px;
+  margin-right: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ceo-socials a:hover {
+  color: #004b9a;
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {opacity: 0; transform: scale(0.9);}
+  100% {opacity: 1; transform: scale(1);}
+}
+
+@keyframes slideInLeft {
+  0% {opacity: 0; transform: translateX(-50px);}
+  100% {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes slideInRight {
+  0% {opacity: 0; transform: translateX(50px);}
+  100% {opacity: 1; transform: translateX(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ceo-container {
+    flex-direction: column;
+  }
+  .ceo-title { font-size: 28px; }
+  .ceo-subtitle { font-size: 16px; }
+  .ceo-description { font-size: 16px; }
+  .ceo-img { max-width: 240px; }
+  .ceo-socials a { font-size: 20px; margin-right: 16px; }
+}
+</style>
+
+
+<!-- FAQ Section -->
+<section class="relative z-10 px-4 sm:px-8 py-24 bg-white text-gray-900">
+  <div class="max-w-5xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900">Frequently Asked Questions</h2>
+    <p class="mt-4 text-lg text-gray-600">Everything traders ask before joining the most transparent & rewarding prop firm in the world.</p>
+  </div>
+
+  <div class="space-y-6 max-w-4xl mx-auto">
+    <!-- FAQ Item -->
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+        <span>How do I get funded by Yung FX Capital?</span>
+        <svg class="h-6 w-6 text-blue-600 transition-transform transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content px-6 pt-0 pb-6 hidden text-gray-700">
+        <p>Once you purchase any Yung FX Capital account, you will instantly receive an email confirmation and account credentials. Further information can be accessed or changed in your account dashboard.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item -->
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+        <span>What happens if I hit my drawdown limit?</span>
+        <svg class="h-6 w-6 text-blue-600 transition-transform transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content px-6 pt-0 pb-6 hidden text-gray-700">
+        <p>You get unlimited free resets every 12 days. Learn, reset, and come back stronger — we’re here to support growth, not punish mistakes.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item -->
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+        <span>When do I receive my payouts?</span>
+        <svg class="h-6 w-6 text-blue-600 transition-transform transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content px-6 pt-0 pb-6 hidden text-gray-700">
+        <p>We process payouts lightning-fast — instant funding comes with instant payout-on-demand. No delays, no hidden rules! Your hard work deserves quick rewards. Not excuses! 💸 Note: Yung FX Capital provides an $1,000 USD on top of your reward if you experience any delays.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item -->
+    <div class="bg-white border border-gray-200 rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+        <span>Is there a minimum or maximum trading days?</span>
+        <svg class="h-6 w-6 text-blue-600 transition-transform transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content px-6 pt-0 pb-6 hidden text-gray-700">
+        <p>Correct! Every account model has its own unique requirement for minimum days required, usually between at least 5-10 trading days. As for Maximum Days, there is no time limit set on any account to make you rush the process. Instant funding, No Evaluations means No Challenges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<div class="text-center mt-16">
+  <h3 class="text-3xl font-extrabold text-gray-900">There's More, No Hidden Rules.</h3>
+  <p class="text-lg text-gray-600 mt-3">See more questions and responses from the community!</p>
+  <a href="explore.html" style="margin-top: 20px;" class="inline-block px-3 py-2 sm:px-6 sm:py-3 rounded-full text-base sm:text-lg font-bold bg-gradient-to-r from-indigo-600 via-blue-700 to-indigo-800 text-white shadow-lg hover:scale-105 transform transition duration-300 animate-fadeInUp">See More FAQ's</a>
+</div>
+
+  <footer class="elite-footer">
+    <div class="footer-wrapper">
+  
+      <div class="elite-footer-container">
+  
+        <!-- Logo and Description -->
+        <div class="footer-column footer-brand">
+            <div class="footer-logo-wrapper">
+                <img src="assets/branding/logo.png" alt="Yung FX Logo" class="footer-logo">
+              </div>              
+          <h3>Yung FX Capital</h3>
+          <p>The Most Trusted Uprising Prop Firm Providing Instant Simulated Capital With Unlimited Scaling Power.</p>
+        </div>
+  
+        <!-- Academy Links -->
+        <div class="footer-column">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="explore.html">FAQ</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="get-started.html">Sign Up</a></li>
+          </ul>
+        </div>
+  
+        <!-- Documents -->
+        <div class="footer-column">
+          <h4>Documents</h4>
+          <ul>
+            <li><a href="assets/documents/Yung_FX_Capital_User_Agreement.pdf" target="_blank">User Agreement</a></li>
+            <li><a href="assets/documents/Yung_FX_Capital_Terms_of_Service.pdf" target="_blank">Terms of Service</a></li>
+            <li><a href="assets/documents/Yung_FX_Capital_memo-of-incorporation.pdf" target="_blank">MOI (Incorporation)</a></li>
+          </ul>
+        </div>
+  
+        <!-- Social / Connect -->
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:support@yungfxacapital.online">Email Us</a></li>
+            <li><a href="https://www.yungfxcapital.online" target="_blank">Legal Website</a></li>
+            <li><a href="https://www.yungfxacademy.co.za" target="_blank">Education Platform</a></li>
+          </ul>
+        </div>
+  
+      </div>
+  
+      <!-- Bottom Bar -->
+      <div class="elite-footer-bottom">
+        <p>© 2025 Yung FX Capital (Pty) Ltd — Reg No: K2024/274338/07. All rights reserved.</p>
+      </div>
+  
+    </div>
+  </footer>
+<section class="disclaimer-section">
+  <div class="disclaimer-container">
+    <h2>Disclaimer & Legal Notice</h2>
+    <p><strong>Yung FX Capital</strong> is a proprietary trading simulation product owned and operated by <strong>Yung FX Academy (Pty) Ltd</strong>, registration number <strong>K2024/274338/07</strong>.</p>
+
+    <p>The Yung FX Capital program offers access to simulated trading environments designed to evaluate participants' educational understanding, trading discipline, and risk management. Participation in Yung FX Capital does <strong>not involve client deposits</strong>, or the handling of investor funds.</p>
+
+    <p>All references to "funding," "capital," or "funded accounts" within Yung FX Capital refer exclusively to virtual simulations and live trading processes. These are used strictly for providing "rewards/payouts" based on performance assessment. They do not represent actual investment opportunities or offers to participate in regulated trading activities.</p>
+
+    <p>Yung FX Capital does <strong>not offer investment advice, portfolio management, brokerage services, or any other regulated financial service</strong>. All tools, data, and information provided through the program are intended for general educational and rewards use only. Users are solely responsible for their trading decisions, whether in simulation or on personal live accounts outside of our platform.</p>
+
+    <p><strong>Trading foreign exchange (forex), CFDs, or any derivative products carries significant risk and may not be suitable for all individuals.</strong> No content provided by Yung FX Capital or Yung FX Academy should be interpreted as a promise of returns or a guarantee of trading success. Past performance does not predict future results.</p>
+
+    <p>We recommend all individuals seek advice from a certified financial professional before engaging in any real-money trading or investment decisions. Yung FX Capital assumes no liability for any losses or damages arising from the use of its services or simulated environments.</p>
+
+    <p>By accessing Yung FX Capital, participating in any simulation, or interacting with our website and materials, you agree to our <a href="assets/documents/Yung_FX_Capital_User_Agreement.pdf" target="_blank">User Agreement</a>, <a href="assets/documents/Yung_FX_Capital_Terms_of_Service.pdf" target="_blank">Terms of Service</a>, and our <a href="assets/documents/Yung_FX_Capital_memo-of-incorporation.pdf" target="_blank">Memorandum of Incorporation</a>. Continued use of this platform signifies full acceptance of our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+
+   <p>For legal, ethical, or data-related concerns, please contact us at <a href="mailto:support@yungfxcapital.online">support@yungfxcapital.online</a>.</p>
+
+    <p><strong>Yung FX Capital (Pty) Ltd — K2024/274338/07</strong><br>© 2025 All rights reserved.</p>
+  </div>
+</section>
+
+  <!-- ELITE COUNTDOWN BAR -->
+<div class="elite-countdown-bar">
+  <div class="elite-text">
+    <span class="elite-label">🚨 Next Price Increase In:</span>
+    <span id="elite-countdown"></span>
+  </div>
+  <a href="blogs/price-value-increase.html" class="elite-btn">Learn Why?</a>
+</div>
+
+<!-- Load Tidio
+<script src="//code.tidio.co/htkubm7fykoeyemktdyhlyjrod3vz33h.js" async></script>  -->
+  <script src="script.js"></script>
+  <script src="graph.js"></script>
+</body>
+</html>
+

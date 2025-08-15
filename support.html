@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Basic Meta -->
+  <meta name="description" content="Yung FX Capital — Redefining the Prop Firm Standard. Get Instant Funding. No Evaluations. The future of forex and CFD trading starts here.">
+  <meta name="author" content="Yung FX Capital Prop Firm">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Yung FX Capital | Instant Prop Firm Funding">
+  <meta property="og:description" content="No Evaluations. Just Instant Funding. Up to 95% profit split, fast withdrawals, and unlimited resets.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yungfxcapital.online">
+  <meta property="og:image" content="https://yungfxcapital.online/assets/branding/logo.png">
+  <meta property="og:site_name" content="Yung FX Capital">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yung FX Capital | Instant Prop Firm Funding">
+  <meta name="twitter:description" content="No Evaluations. Just Instant Funding. Up to 95% profit split, fast withdrawals, and unlimited resets.">
+  <meta name="twitter:image" content="https://yungfxcapital.online/assets/branding/logo.png">
+  <meta name="twitter:url" content="https://yungfxcapital.online">
+
+  <title>Contact Support 24/7</title>
+
+  <!-- Favicon  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- End Head -->
+   <style>
+  .glassmorphic {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+</style>
+  </head>
+ <!-- Preloader -->
+<div id="preloader" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 145, 241, 0.808);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  color: white;
+  font-family: 'Arial', sans-serif;
+">
+  <div style="font-size: 40px; font-weight: bold;" id="loader-percentage">0%</div>
+  <div style="margin-top: 10px; font-size: 16px; letter-spacing: 1px;">Initializing Capital Engines...</div>
+</div>
+
+<script>
+  let count = 0;
+  const loader = document.getElementById("loader-percentage");
+  const preloader = document.getElementById("preloader");
+
+  const interval = setInterval(() => {
+    count++;
+    loader.textContent = count + "%";
+    if (count >= 100) {
+      clearInterval(interval);
+      hidePreloader();
+    }
+  }, 30); // Fast digital loading
+
+  function hidePreloader() {
+    preloader.style.opacity = "0";
+    setTimeout(() => preloader.style.display = "none", 1200);
+  }
+
+  // Failsafe: Remove after 12 seconds max no matter what
+  setTimeout(() => {
+    if (preloader.style.display !== "none") {
+      clearInterval(interval);
+      hidePreloader();
+    }
+  }, 5000);
+</script>
+
+  <body class="relative bg-white text-gray-900">
+  <header class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-lg border rounded-full shadow-lg px-6 py-2 flex justify-between items-center max-w-6xl w-[95%] z-50">
+  <div class="flex items-center space-x-3">
+    <img src="assets/branding/logo.png" alt="Yung FX Capital Logo" class="h-8 w-auto" style="border-radius: 50%;">
+    <h1 class="text-l md:text-1xl font-bold text-brand">Yung FX Capital</h1>
+  </div>
+  <nav class="hidden md:flex space-x-6 text-sm md:text-base font-medium">
+    <a href="get-started.html" class="hover:text-brand transition"><b>Get-Started</b></a>
+    <a href="index.html/#get-started" class="hover:text-brand transition">Pricing</a>
+    <a href="login.html" class="hover:text-brand transition"><b>Community</b></a>
+    <a href="explore.html" class="hover:text-brand transition">Explore</a>
+  </nav>
+  <div class="flex items-center space-x-4">
+  <a href="login.html" class="bg-black text-white px-3 md:px-4 py-1 rounded-full text-xs md:text-sm hover:bg-blue-800 transition">
+    Login <i class="fa fa-sign-in"></i>
+  </a>
+</div>
+  </header>
+  <br><br><br><br>
+<section class="relative w-full min-h-[30vh] flex items-center justify-center text-center px-6 py-20 bg-white">
+  <div class="relative z-10 max-w-3xl w-full p-10 rounded-2xl bg-blacl/10 backdrop-blur-md border border-black/20 shadow-[0_0_40px_rgba(255,255,255,0.05)]">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-black mb-4 tracking-tight">
+      How Can We Help?
+    </h1>
+    <p class="text-black text-lg sm:text-xl font-medium">
+      Our support team is available 24/7. Get help, find answers, or contact us anytime.
+    </p>
+  </div>
+
+  <!-- Decorative Glow Effect -->
+  <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-blue-500 opacity-20 blur-3xl rounded-full z-0"></div>
+</section>
+
+<section class="w-full bg-white py-20 px-4 sm:px-8 md:px-16">
+  <div class="max-w-3xl mx-auto p-8 rounded-2xl bg-black/10 backdrop-blur-md border border-black/20 shadow-[0_0_30px_rgba(255,255,255,0.05)]">
+    <h2 class="text-3xl sm:text-4xl font-bold text-black text-center mb-6">Contact Our Support Team</h2>
+    <p class="text-black text-center mb-10">Fill in your details below — we'll get back to you shortly.</p>
+
+    <form action="#" method="POST" class="space-y-6">
+      <div>
+        <label class="block text-sm text-black mb-2" for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name"
+          class="w-full px-4 py-3 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-black/20" required>
+      </div>
+
+      <div>
+        <label class="block text-sm text-black mb-2" for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email"
+          class="w-full px-4 py-3 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-black/20" required>
+      </div>
+
+      <div>
+        <label class="block text-sm text-black mb-2" for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..."
+          class="w-full px-4 py-3 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-black/20" required></textarea>
+      </div>
+
+      <button type="submit"
+        class="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition duration-200 shadow-md">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+
+<!-- FAQ Section -->
+<section class="relative z-10 px-4 sm:px-8 py-24 bg-black text-gray-900">
+  <div class="max-w-5xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-extrabold tracking-tight text-white">Frequently Asked Questions</h2>
+    <p class="mt-4 text-lg text-white">General support questions asked by traders at Yung FX Capital.</p>
+  </div>
+
+  <div class="space-y-6 max-w-4xl mx-auto">
+    
+    <!-- 1 -->
+    <div class="bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-white focus:outline-none faq-toggle">
+        <span>How do I contact the Yung FX support team?</span>
+        <svg class="h-6 w-6 text-blue-400 transition-transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pt-0 pb-6 text-white">
+        <p>You can visit our <a href="support.html" class="text-blue-400 underline">Support Page</a> or email us at <strong>helpdesk@yungfxacademy.online</strong>. Our response time is typically under 3 hours.</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-white focus:outline-none faq-toggle">
+        <span>Can I get direct 1-on-1 support?</span>
+        <svg class="h-6 w-6 text-blue-400 transition-transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pt-0 pb-6 text-white">
+        <p>Yes. We offer direct help via WhatsApp, Telegram, or Zoom. Just request a session when filling out our contact form.</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-white focus:outline-none faq-toggle">
+        <span>What if I made a payment and didn’t receive my account?</span>
+        <svg class="h-6 w-6 text-blue-400 transition-transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pt-0 pb-6 text-white">
+        <p>Send us your proof of payment on our support channels. We'll verify it and immediately activate or resend your account credentials.</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-white focus:outline-none faq-toggle">
+        <span>Do I have to complete a challenge or evaluation?</span>
+        <svg class="h-6 w-6 text-blue-400 transition-transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pt-0 pb-6 text-white">
+        <p>No. With our instant funding model, you skip challenges and evaluations. However, our Growth Fund accounts do require assessments to verify skill.</p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-white focus:outline-none faq-toggle">
+        <span>How long does it take to receive my payout?</span>
+        <svg class="h-6 w-6 text-blue-400 transition-transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pt-0 pb-6 text-white">
+        <p>Payouts are processed instantly on-demand. We pride ourselves on speed. If there's any delay, we compensate you with $1,000 USD bonus credit.</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-white focus:outline-none faq-toggle">
+        <span>What’s the minimum or maximum number of trading days?</span>
+        <svg class="h-6 w-6 text-blue-400 transition-transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pt-0 pb-6 text-white">
+        <p>There are no maximum limits. Minimum days vary based on account model (usually 5–10 days). Trade at your pace — no rush, no pressure.</p>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-white focus:outline-none faq-toggle">
+        <span>Do I get support even after I’m funded?</span>
+        <svg class="h-6 w-6 text-blue-400 transition-transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pt-0 pb-6 text-white">
+        <p>Absolutely. Our relationship doesn't end when you get funded. We continue to mentor and assist our traders throughout their journey.</p>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-white focus:outline-none faq-toggle">
+        <span>What’s your refund policy?</span>
+        <svg class="h-6 w-6 text-blue-400 transition-transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pt-0 pb-6 text-white">
+        <p>All purchases are final. We do not offer refunds. However, if there was an error on our side (e.g., duplicate charge), we’ll resolve it instantly.</p>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-white focus:outline-none faq-toggle">
+        <span>Can I reset my account if I breach drawdown?</span>
+        <svg class="h-6 w-6 text-blue-400 transition-transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pt-0 pb-6 text-white">
+        <p>Yes — we offer unlimited free resets. You can request a reset 12 days after breaching the drawdown rules. No extra payment needed.</p>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="bg-black/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      <button class="w-full px-6 py-5 flex justify-between items-center text-left text-lg font-medium text-white focus:outline-none faq-toggle">
+        <span>Is there a community I can join?</span>
+        <svg class="h-6 w-6 text-blue-400 transition-transform faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="faq-content hidden px-6 pt-0 pb-6 text-white">
+        <p>Yes — once you’re onboarded, you’ll be invited to our private community with other traders for support, trade reviews, and strategy development.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="disclaimer-section">
+  <div class="disclaimer-container">
+    <h2>Disclaimer & Legal Notice</h2>
+    <p><strong>Yung FX Capital</strong> is a proprietary trading simulation product owned and operated by <strong>Yung FX Academy (Pty) Ltd</strong>, registration number <strong>K2024/274338/07</strong>.</p>
+
+    <p>The Yung FX Capital program offers access to simulated trading environments designed to evaluate participants' educational understanding, trading discipline, and risk management. Participation in Yung FX Capital does <strong>not involve client deposits</strong>, or the handling of investor funds.</p>
+
+    <p>All references to "funding," "capital," or "funded accounts" within Yung FX Capital refer exclusively to virtual simulations and live trading processes. These are used strictly for providing "rewards/payouts" based on performance assessment. They do not represent actual investment opportunities or offers to participate in regulated trading activities.</p>
+
+    <p>Yung FX Capital does <strong>not offer investment advice, portfolio management, brokerage services, or any other regulated financial service</strong>. All tools, data, and information provided through the program are intended for general educational and rewards use only. Users are solely responsible for their trading decisions, whether in simulation or on personal live accounts outside of our platform.</p>
+
+    <p><strong>Trading foreign exchange (forex), CFDs, or any derivative products carries significant risk and may not be suitable for all individuals.</strong> No content provided by Yung FX Capital or Yung FX Academy should be interpreted as a promise of returns or a guarantee of trading success. Past performance does not predict future results.</p>
+
+    <p>We recommend all individuals seek advice from a certified financial professional before engaging in any real-money trading or investment decisions. Yung FX Capital assumes no liability for any losses or damages arising from the use of its services or simulated environments.</p>
+
+    <p>By accessing Yung FX Capital, participating in any simulation, or interacting with our website and materials, you agree to our <a href="assets/documents/Yung_FX_Capital_User_Agreement.pdf" target="_blank">User Agreement</a>, <a href="assets/documents/Yung_FX_Capital_Terms_of_Service.pdf" target="_blank">Terms of Service</a>, and our <a href="assets/documents/Yung_FX_Capital_memo-of-incorporation.pdf" target="_blank">Memorandum of Incorporation</a>. Continued use of this platform signifies full acceptance of our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+
+   <p>For legal, ethical, or data-related concerns, please contact us at <a href="mailto:support@yungfxcapital.online">support@yungfxcapital.online</a>.</p>
+
+    <p><strong>Yung FX Capital (Pty) Ltd — K2024/274338/07</strong><br>© 2025 All rights reserved.</p>
+  </div>
+</section>
+<script src="//code.tidio.co/htkubm7fykoeyemktdyhlyjrod3vz33h.js" async></script>
+<script>
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    });
+  });
+</script>
+
+  <script src="script.js"></script>
+  <script src="graph.js"></script>
+</body>
+</html>
+
