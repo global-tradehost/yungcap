@@ -87,27 +87,103 @@
 </script>
 
   <body class="relative bg-white text-gray-900">
-  <header class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-lg border rounded-full shadow-lg px-6 py-2 flex justify-between items-center max-w-6xl w-[95%] z-50">
+ <header class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-lg border rounded-full shadow-lg px-6 py-2 flex justify-between items-center max-w-6xl w-[95%] z-50">
   <div class="flex items-center space-x-3">
-    <img src="assets/branding/logo.png" alt="Yung FX Capital Logo" class="h-8 w-auto" style="border-radius: 50%;">
+    <!-- Logo with Neon Instagram Circle -->
+    <div id="story-logo" class="relative w-10 h-10 rounded-full p-[2px] cursor-pointer bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+      <img src="assets/branding/logo.png" alt="Yung FX Capital Logo" class="w-full h-full rounded-full border-2 border-white object-cover">
+    </div>
     <h1 class="text-l md:text-1xl font-bold text-brand">Yung FX Capital</h1>
   </div>
+
+  <!-- Navbar Links -->
   <nav class="hidden md:flex space-x-6 text-sm md:text-base font-medium">
     <a href="get-started.html" class="hover:text-brand transition"><b>Get-Started</b></a>
     <a href="#get-started" class="hover:text-brand transition">Pricing</a>
     <a href="login.html" class="hover:text-brand transition"><b>Community</b></a>
     <a href="explore.html" class="hover:text-brand transition">Explore</a>
   </nav>
+
+  <!-- Right side -->
   <div class="flex items-center space-x-4">
-  <a href="support.html" class="flex items-center space-x-1">
-  <img src="assets/images/support.png" alt="Customer Support" class="h-6 w-6">
-  <i class="fas fa-chevron-down text-xs text-black"></i>
-</a>
-  <a href="login.html" class="bg-black text-white px-3 md:px-4 py-1 rounded-full text-xs md:text-sm hover:bg-blue-800 transition">
-    Login <i class="fa fa-sign-in"></i>
-  </a>
+    <a href="support.html" class="flex items-center space-x-1">
+      <img src="assets/images/support.png" alt="Customer Support" class="h-6 w-6">
+      <i class="fas fa-chevron-down text-xs text-black"></i>
+    </a>
+    <a href="login.html" class="bg-black text-white px-3 md:px-4 py-1 rounded-full text-xs md:text-sm hover:bg-blue-800 transition">
+      Login <i class="fa fa-sign-in"></i>
+    </a>
+  </div>
+</header>
+
+<!-- Glassmorphic Popup -->
+<div id="story-popup" class="fixed inset-0 bg-black/50 backdrop-blur-lg hidden items-center justify-center z-[999]">
+  <div class="bg-white/10 border border-white/20 backdrop-blur-xl rounded-2xl p-6 w-[90%] md:w-[600px] shadow-2xl relative">
+    <!-- Close Button -->
+    <button id="close-popup" class="absolute top-3 right-3 text-white text-lg">&times;</button>
+
+    <h2 class="text-white text-2xl font-bold mb-4">Latest Payouts</h2>
+
+    <!-- Slider -->
+    <div class="relative overflow-hidden">
+      <div id="slider-track" class="flex transition-transform duration-500">
+        <!-- Slide 1 -->
+        <div class="min-w-full flex flex-col items-center">
+          <img src="assets/certificates/1.png" class="rounded-xl shadow-lg max-h-[350px] object-contain" alt="Lebo M Payout">
+          <p class="mt-2 text-white">Lebo M</p>
+        </div>
+        <!-- Slide 2 -->
+        <div class="min-w-full flex flex-col items-center">
+          <img src="assets/certificates/7.png" class="rounded-xl shadow-lg max-h-[350px] object-contain" alt="Amaka E Payout">
+          <p class="mt-2 text-white">Amaka E.</p>
+        </div>
+        <!-- Slide 3 -->
+        <div class="min-w-full flex flex-col items-center">
+          <img src="assets/certificates/11.png" class="rounded-xl shadow-lg max-h-[350px] object-contain" alt="Ayesha K Payout">
+          <p class="mt-2 text-white">Ayesha K.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="flex justify-between mt-4">
+      <button id="prev" class="px-4 py-2 bg-white/20 text-white rounded-full hover:bg-white/40">← Prev</button>
+      <button id="next" class="px-4 py-2 bg-white/20 text-white rounded-full hover:bg-white/40">Next →</button>
+    </div>
+  </div>
 </div>
-  </header>
+
+<script>
+  const storyLogo = document.getElementById('story-logo');
+  const popup = document.getElementById('story-popup');
+  const closePopup = document.getElementById('close-popup');
+  const sliderTrack = document.getElementById('slider-track');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+
+  let currentSlide = 0;
+  const totalSlides = sliderTrack.children.length;
+
+  storyLogo.addEventListener('click', () => {
+    popup.classList.remove('hidden');
+    popup.classList.add('flex');
+  });
+
+  closePopup.addEventListener('click', () => {
+    popup.classList.add('hidden');
+    popup.classList.remove('flex');
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+  });
+</script>
   <br><br><br><br>
 <section class="main-hero elite-hero">
   <div class="hero-overlay"></div>
@@ -115,7 +191,7 @@
     <h1 class="main-title">Yung FX Capital</h1>
     <p class="main-subtitle">Rising Prop Firm For Traders To Get Funded Instantly</p>
     <p class="main-description">
-     Unlock instant access up to $400K worth of capital with unlimited free resets.
+     <b>Unlock instant access up to $400K worth of capital with unlimited free resets.</b>
     </p>
     <div class="hero-buttons">
       <a href="login.html" class="hero-btn login">Login <i class="fas fa-sign-in-alt"></i></a>
@@ -231,6 +307,66 @@
     </div>
   </div>
 </section>
+
+<section class="py-10 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-black">Our Recent Funded Traders </h2>
+
+    <!-- Horizontal Scroll Container -->
+    <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
+      <!-- Trader 1 -->
+      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+        <img src="assets/our-traders/trader621.jpg" alt="Trader 621" class="w-full h-full rounded-full border-2 border-white object-cover">
+      </div>
+
+      <!-- Trader 2 -->
+      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+        <img src="assets/our-traders/trader622.jpg" alt="Trader 622" class="w-full h-full rounded-full border-2 border-white object-cover">
+      </div>
+
+      <!-- Trader 3 -->
+      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+        <img src="assets/our-traders/trader623.jpg" alt="Trader 623" class="w-full h-full rounded-full border-2 border-white object-cover">
+      </div>
+
+      <!-- Trader 4 -->
+      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+        <img src="assets/our-traders/trader624.jpg" alt="Trader 624" class="w-full h-full rounded-full border-2 border-white object-cover">
+      </div>
+
+      <!-- Trader 5 -->
+      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+        <img src="assets/our-traders/trader625.jpg" alt="Trader 625" class="w-full h-full rounded-full border-2 border-white object-cover">
+      </div>
+
+      <!-- Trader 6 -->
+      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+        <img src="assets/our-traders/trader626.jpg" alt="Trader 626" class="w-full h-full rounded-full border-2 border-white object-cover">
+      </div>
+
+      <!-- Trader 7 -->
+      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+        <img src="assets/our-traders/trader627.jpg" alt="Trader 627" class="w-full h-full rounded-full border-2 border-white object-cover">
+      </div>
+
+      <!-- Trader 8 -->
+      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+        <img src="assets/our-traders/trader628.jpg" alt="Trader 628" class="w-full h-full rounded-full border-2 border-white object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hide scrollbar (optional) -->
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
 
 
 
