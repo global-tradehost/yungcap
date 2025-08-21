@@ -38,14 +38,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- End Head -->
   </head>
- <!-- Preloader -->
+<!-- Elite Preloader -->
 <div id="preloader" style="
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 145, 241, 0.808);
+  background: linear-gradient(135deg, #0091f1, #0a192f);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,11 +53,60 @@
   z-index: 9999;
   color: white;
   font-family: 'Arial', sans-serif;
+  overflow: hidden;
 ">
-  <div style="font-size: 40px; font-weight: bold;" id="loader-percentage">0%</div>
-  <div style="margin-top: 10px; font-size: 16px; letter-spacing: 1px;">Initializing Capital Engines...</div>
+  <!-- Logo Animation -->
+  <div class="logo-wrapper" style="position: relative; width: 140px; height: 140px;">
+    <img src="assets/branding/logo-trans.png" alt="Logo" style="
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      animation: pulse-glow 2s infinite;
+    ">
+    <div class="logo-ring" style="
+      position: absolute;
+      top: -15px; left: -15px;
+      width: 170px; height: 170px;
+      border: 3px solid rgba(0,145,241,0.5);
+      border-radius: 50%;
+      animation: spin-ring 2.5s linear infinite;
+    "></div>
+  </div>
+
+  <!-- Percentage Counter -->
+  <div id="loader-percentage" style="
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00cfff, 0 0 20px #0091f1;
+  ">0%</div>
+
+  <!-- Tagline -->
+  <div style="
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    opacity: 0.8;
+  ">Initializing Capital Engines...</div>
 </div>
 
+<!-- Animations -->
+<style>
+@keyframes pulse-glow {
+  0% { filter: drop-shadow(0 0 0px #00cfff); }
+  50% { filter: drop-shadow(0 0 20px #00cfff) drop-shadow(0 0 40px #0091f1); }
+  100% { filter: drop-shadow(0 0 0px #00cfff); }
+}
+
+@keyframes spin-ring {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+</style>
+
+<!-- Script -->
 <script>
   let count = 0;
   const loader = document.getElementById("loader-percentage");
@@ -70,20 +119,21 @@
       clearInterval(interval);
       hidePreloader();
     }
-  }, 30); // Fast digital loading
+  }, 35); // Smooth loading speed
 
   function hidePreloader() {
+    preloader.style.transition = "opacity 1s ease";
     preloader.style.opacity = "0";
-    setTimeout(() => preloader.style.display = "none", 1200);
+    setTimeout(() => preloader.style.display = "none", 3000);
   }
 
-  // Failsafe: Remove after 12 seconds max no matter what
+  // Failsafe: Remove after 6s
   setTimeout(() => {
     if (preloader.style.display !== "none") {
       clearInterval(interval);
       hidePreloader();
     }
-  }, 5000);
+  }, 9000);
 </script>
 
   <body class="relative bg-white text-gray-900">
@@ -310,48 +360,53 @@
 
 <section class="py-10 bg-white">
   <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-black">Our Recent Funded Traders </h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-black">Our Recent Funded Traders</h2>
 
-    <!-- Horizontal Scroll Container -->
-    <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
-      <!-- Trader 1 -->
-      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
-        <img src="assets/our-traders/trader621.jpg" alt="Trader 621" class="w-full h-full rounded-full border-2 border-white object-cover">
-      </div>
+    <!-- Wrapper to center on desktop -->
+    <div class="flex justify-center">
+      <!-- Horizontal Scroll Container -->
+      <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-4 md:justify-center">
+        
+        <!-- Trader 1 -->
+        <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+          <img src="assets/our-traders/trader621.jpg" alt="Trader 621" class="w-full h-full rounded-full border-2 border-white object-cover">
+        </div>
 
-      <!-- Trader 2 -->
-      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
-        <img src="assets/our-traders/trader622.jpg" alt="Trader 622" class="w-full h-full rounded-full border-2 border-white object-cover">
-      </div>
+        <!-- Trader 2 -->
+        <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+          <img src="assets/our-traders/trader622.jpg" alt="Trader 622" class="w-full h-full rounded-full border-2 border-white object-cover">
+        </div>
 
-      <!-- Trader 3 -->
-      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
-        <img src="assets/our-traders/trader623.jpg" alt="Trader 623" class="w-full h-full rounded-full border-2 border-white object-cover">
-      </div>
+        <!-- Trader 3 -->
+        <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+          <img src="assets/our-traders/trader623.jpg" alt="Trader 623" class="w-full h-full rounded-full border-2 border-white object-cover">
+        </div>
 
-      <!-- Trader 4 -->
-      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
-        <img src="assets/our-traders/trader624.jpg" alt="Trader 624" class="w-full h-full rounded-full border-2 border-white object-cover">
-      </div>
+        <!-- Trader 4 -->
+        <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+          <img src="assets/our-traders/trader624.jpg" alt="Trader 624" class="w-full h-full rounded-full border-2 border-white object-cover">
+        </div>
 
-      <!-- Trader 5 -->
-      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
-        <img src="assets/our-traders/trader625.jpg" alt="Trader 625" class="w-full h-full rounded-full border-2 border-white object-cover">
-      </div>
+        <!-- Trader 5 -->
+        <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+          <img src="assets/our-traders/trader625.jpg" alt="Trader 625" class="w-full h-full rounded-full border-2 border-white object-cover">
+        </div>
 
-      <!-- Trader 6 -->
-      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
-        <img src="assets/our-traders/trader626.jpg" alt="Trader 626" class="w-full h-full rounded-full border-2 border-white object-cover">
-      </div>
+        <!-- Trader 6 -->
+        <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+          <img src="assets/our-traders/trader626.jpg" alt="Trader 626" class="w-full h-full rounded-full border-2 border-white object-cover">
+        </div>
 
-      <!-- Trader 7 -->
-      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
-        <img src="assets/our-traders/trader627.jpg" alt="Trader 627" class="w-full h-full rounded-full border-2 border-white object-cover">
-      </div>
+        <!-- Trader 7 -->
+        <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+          <img src="assets/our-traders/trader627.jpg" alt="Trader 627" class="w-full h-full rounded-full border-2 border-white object-cover">
+        </div>
 
-      <!-- Trader 8 -->
-      <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
-        <img src="assets/our-traders/trader628.jpg" alt="Trader 628" class="w-full h-full rounded-full border-2 border-white object-cover">
+        <!-- Trader 8 -->
+        <div class="relative w-16 h-16 flex-shrink-0 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+          <img src="assets/our-traders/trader628.jpg" alt="Trader 628" class="w-full h-full rounded-full border-2 border-white object-cover">
+        </div>
+
       </div>
     </div>
   </div>
@@ -367,6 +422,7 @@
     scrollbar-width: none;
   }
 </style>
+
 
 
 
@@ -387,39 +443,39 @@
         <button class="promo-pricing__tab" data-tab="tab-50k">$50K Starter</button>
         <button class="promo-pricing__tab active" data-tab="tab-100k">$100K Growth</button>
       </div>
-      <div class="promo-pricing__cards bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl">
+      <div class="promo-pricing__cards">
         <div class="glowing-border promo-pricing__card bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl" id="tab-25k">
           <div class="brics-header-section">
             <div style="display: flex; align-items: center;">
-              <h3 class="brics-title" style="font-size: 25px; margin: 0;">$25,000 USD</h3>
+              <h3 style="color: #fff; font-size: 25px; margin: 0;">$25,000 USD</h3>
             </div>
             </div>
           <ul>
-            <li class="brics-title" style="font-size: 18px; margin: 0;">Account Features:</li>
+            <li style="color: #fff; font-size: 18px; margin: 0;">Account Features:</li>
             <li>
-               Unlimited Free Resets  <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="You eligble for a free reset after 12 days of from the date of suspension." onclick="window.location.href='explore.html';"></i>
+               Unlimited Free Resets  <i class="fa fa-info-circle" style="color: #ffffff" aria-hidden="true" title="You eligble for a free reset after 12 days of from the date of suspension." onclick="window.location.href='explore.html';"></i>
                </li>
-            <li>Profit Target: <b  style="color: #007bff;">Not Required</b></li>
+            <li>Profit Target: <b  style="color: #ffffff;">Not Required</b></li>
             <li>
-              Maximum Daily Loss: <b style="color: #007bff;">25%</b></li>
+              Maximum Daily Loss: <b style="color: #ffffff;">25%</b></li>
             <li>
-              Maximum Overall Loss: <b style="color: #007bff;">50%</b></li>
+              Maximum Overall Loss: <b style="color: #ffffff;">50%</b></li>
             <li>
               Equity Based Drawdown
-              <i class="fa fa-info-circle"  style="color: #037dff;" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed." onclick="window.location.href='explore.html';"></i>
+              <i class="fa fa-info-circle"  style="color: #ffffff;" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed." onclick="window.location.href='explore.html';"></i>
             </li>
-            <li>Minimum Trading Days: <b style="color: #007bff;">5 Days</b></li>
+            <li>Minimum Trading Days: <b style="color: #ffffff;">5 Days</b></li>
             <li>
               Profit Split:<b> Up To 100%</b>
-              <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively." onclick="window.location.href='explore.html';"></i>
+              <i class="fa fa-info-circle" style="color: #ffffff;" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively." onclick="window.location.href='explore.html';"></i>
             </li>
             <li>
               Payout Cycle: 
-              <b style="color: #007bff;">7-Day Weekly</b></li>
+              <b style="color: #ffffff;">7-Day Weekly</b></li>
             </ul>
           <div class="divider">
-            <hr style="color: #000 !important;"/>
-            <span style="color: #000 !important;">Price: $69 USD<br><a style="color: #007bff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
+            <hr style="color: #ffffff !important;"/>
+            <span style="color: #ffffff !important;">Price: $69 USD<br><a style="color: #ffffff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
             <hr />
           </div>
           <a href="get-started.html" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">Get Started</a>
@@ -427,35 +483,35 @@
         <div class="glowing-border promo-pricing__card bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl" id="tab-50k">
           <div class="brics-header-section">
             <div style="display: flex; align-items: center;">
-              <h3 class="brics-title" style="font-size: 25px; margin: 0;">$50,000 USD</h3>
+              <h3 style="color: #fff; font-size: 25px; margin: 0;">$50,000 USD</h3>
             </div>
             </div>
           <ul>
-            <li class="brics-title" style="font-size: 18px; margin: 0;">Account Features:</li>
+            <li style="color: #fff; font-size: 18px; margin: 0;">Account Features:</li>
             <li>
-               Unlimited Free Resets  <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="You eligble for a free reset after 12 days of from the date of suspension." onclick="window.location.href='explore.html';"></i>
+               Unlimited Free Resets  <i class="fa fa-info-circle" style="color: #ffffff;" aria-hidden="true" title="You eligble for a free reset after 12 days of from the date of suspension." onclick="window.location.href='explore.html';"></i>
                </li>
-            <li>Profit Target: <b style="color: #007bff;">Not Required</b></li>
+            <li>Profit Target: <b style="color: #ffffff;">Not Required</b></li>
             <li>
-              Maximum Daily Loss: <b  style="color: #007bff;">10%</b></li>
+              Maximum Daily Loss: <b  style="color: #ffffff">10%</b></li>
             <li>
-              Maximum Overall Loss: <b style="color: #007bff;">25%</b></li>
+              Maximum Overall Loss: <b style="color: #ffffff;">25%</b></li>
             <li>
               Equity Based Drawdown
-              <i class="fa fa-info-circle"  style="color: #037dff;" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed." onclick="window.location.href='explore.html';"></i>
+              <i class="fa fa-info-circle"  style="color: #ffffff;" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed." onclick="window.location.href='explore.html';"></i>
             </li>
-            <li>Minimum Trading Days: <b style="color: #007bff;">5 Days</b></li>
+            <li>Minimum Trading Days: <b style="color: #ffffff;">5 Days</b></li>
             <li>
               Profit Split:<b> Up To 90%</b>
-              <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively." onclick="window.location.href='explore.html';"></i>
+              <i class="fa fa-info-circle" style="color: #ffffff" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively." onclick="window.location.href='explore.html';"></i>
             </li>
             <li>
               Payout Cycle: 
-              <b  style="color: #007bff;">7-Day Weekly</b></li>
+              <b  style="color: #ffffff;">7-Day Weekly</b></li>
             </ul>
           <div class="divider">
-            <hr style="color: #000 !important;"/>
-            <span style="color: #000 !important;">Price: $99 USD<br><a style="color: #007bff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
+            <hr style="color: #ffffff !important;"/>
+            <span style="color: #ffffff !important;">Price: $99 USD<br><a style="color: #ffffff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
             <hr />
           </div>
           <a href="get-started.html" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">Get Started</a>
@@ -463,35 +519,35 @@
         <div class="glowing-border promo-pricing__card active bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl" id="tab-100k">
           <div class="brics-header-section">
             <div style="display: flex; align-items: center;">
-              <h3 class="brics-title" style="font-size: 25px; margin: 0;">$100,000 USD</h3>
+              <h3 style="color: #fff; font-size: 25px; margin: 0;">$100,000 USD</h3>
             </div>
             </div>
           <ul>
-            <li class="brics-title" style="font-size: 18px; margin: 0;">Account Features:</li>
+            <li style="color: #fff; font-size: 18px; margin: 0;">Account Features:</li>
             <li>
-               Unlimited Free Resets  <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="You eligble for a free reset after 12 days of from the date of suspension." onclick="window.location.href='explore.html';"></i>
+               Unlimited Free Resets  <i class="fa fa-info-circle" style="color: #ffffff;" aria-hidden="true" title="You eligble for a free reset after 12 days of from the date of suspension." onclick="window.location.href='explore.html';"></i>
                </li>
-            <li>Profit Target: <b style="color: #007bff;">Not Required</b></li>
+            <li>Profit Target: <b style="color: #ffffff;">Not Required</b></li>
             <li>
-              Maximum Daily Loss: <b style="color: #007bff;">12%</b></li>
+              Maximum Daily Loss: <b style="color: #ffffff;">12%</b></li>
             <li>
-              Maximum Overall Loss: <b style="color: #007bff;">30%</b></li>
+              Maximum Overall Loss: <b style="color: #ffffff;">30%</b></li>
             <li>
               Equity Based Drawdown
-              <i class="fa fa-info-circle"  style="color: #037dff;" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed." onclick="window.location.href='explore.html';"></i>
+              <i class="fa fa-info-circle"  style="color: #ffffff;" aria-hidden="true" title="Equity-based drawdown means our systems detect if the open trade has reached drawdown and the trade will automatically get closed." onclick="window.location.href='explore.html';"></i>
             </li>
-            <li>Minimum Trading Days: <b style="color: #007bff;">10 Days</b></li>
+            <li>Minimum Trading Days: <b style="color: #ffffff;">10 Days</b></li>
             <li>
               Profit Split:<b> Up To 100%</b>
-              <i class="fa fa-info-circle" style="color: #037dff;" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively." onclick="window.location.href='explore.html';"></i>
+              <i class="fa fa-info-circle" style="color: #ffffff;" aria-hidden="true" title="100% Profit Split ONLY on the first 3 payouts and 90% on your next payouts consecutively." onclick="window.location.href='explore.html';"></i>
             </li>
             <li>
               Payout Cycle: 
-              <b style="color: #007bff;">Bi-weekly</b></li>
+              <b style="color: #ffffff;">Bi-weekly</b></li>
             </ul>
           <div class="divider">
-            <hr style="color: #000 !important;" />
-            <span style="color: #000 !important;">Price: $137 USD<br><a style="color: #007bff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
+            <hr style="color: #ffffff !important;" />
+            <span style="color: #ffffff !important;">Price: $137 USD<br><a style="color: #ffffff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
             <hr />
           </div>
           <a href="get-started.html" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">Get Started</a>
@@ -587,8 +643,8 @@
 }
 .promo-pricing__cards > div {
   display: none;
-  color: #000;
-  background: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+  background: linear-gradient(to bottom, #005BFF, #005BFF);
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 20px;
   padding: 1.5rem;
@@ -3510,8 +3566,8 @@
   <a href="blogs/price-value-increase.html" class="elite-btn">Learn Why?</a>
 </div>
 
-<!-- Load Tidio
-<script src="//code.tidio.co/htkubm7fykoeyemktdyhlyjrod3vz33h.js" async></script>  -->
+
+<script src="//code.tidio.co/htkubm7fykoeyemktdyhlyjrod3vz33h.js" async></script> 
   <script src="script.js"></script>
   <script src="graph.js"></script>
 </body>
