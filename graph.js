@@ -93,7 +93,7 @@ document.querySelectorAll('.promo-pricing__tab').forEach(button => {
 });
 
 function updateCountdown() {
-  const endDate = new Date('2025-08-30T00:00:00');
+  const endDate = new Date('2025-08-24T00:00:00');
   const now = new Date();
   const diff = endDate - now;
 
