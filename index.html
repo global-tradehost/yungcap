@@ -34,6 +34,19 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="manifest" href="site.webmanifest">
+   <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        backgroundImage: {
+          'grid':
+            'linear-gradient(to right, rgba(2,132,199,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(2,132,199,0.06) 1px, transparent 1px)',
+        }
+      }
+    }
+  }
+</script>
+
 </head>
 <!-- Elite Preloader -->
 <div id="preloader" style="
@@ -134,6 +147,7 @@
 </script>
 
   <body class="relative bg-white text-gray-900">
+    <div class="pointer-events-none fixed inset-0 bg-grid bg-[length:24px_24px]"></div>
  <header class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-lg border rounded-full shadow-lg px-6 py-2 flex justify-between items-center max-w-6xl w-[95%] z-50">
   <div class="flex items-center space-x-3">
     <!-- Logo with Neon Instagram Circle -->
@@ -3730,7 +3744,17 @@
   </div>
   <a href="blogs/price-value-increase.html" class="elite-btn">Learn Why?</a>
 </div>
-
+ <script>
+      // Populate dynamic bits
+      const elTime = document.getElementById('last-checked');
+      const elReq = document.getElementById('req-id');
+      const elYear = document.getElementById('year');
+      elYear.textContent = new Date().getFullYear();
+      elTime.textContent = new Date().toLocaleString();
+      elReq.textContent = (crypto && crypto.getRandomValues)
+        ? [...crypto.getRandomValues(new Uint8Array(6))].map(b=>b.toString(16).padStart(2,'0')).join('')
+        : Math.random().toString(16).slice(2, 14);
+    </script>
 <!-- Load Tidio
 <script src="//code.tidio.co/htkubm7fykoeyemktdyhlyjrod3vz33h.js" async></script>  -->
   <script src="script.js"></script>
