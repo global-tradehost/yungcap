@@ -1,0 +1,78 @@
+ /* ============= Custom Effects ============= */
+    :root {
+      --glass-bg: rgba(255, 255, 255, 0.35);
+      --glass-border: rgba(255, 255, 255, 0.6);
+      --fx-primary: 212, 100%, 55%;   /* electric blue */
+      --fx-secondary: 270, 100%, 60%; /* violet */
+      --fx-accent: 190, 100%, 50%;    /* aqua */
+    }
+
+    /* premium typography smoothing */
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+    /* neon gradient border (using mask) */
+    .gradient-border {
+      position: relative;
+      isolation: isolate;
+    }
+    .gradient-border::before {
+      content: "";
+      position: absolute; inset: -1px;
+      border-radius: 1.5rem; /* rounded-3xl */
+      background: conic-gradient(from 180deg, 
+        hsl(var(--fx-primary)) 0%,
+        hsl(var(--fx-secondary)) 25%,
+        hsl(var(--fx-accent)) 50%,
+        hsl(var(--fx-secondary)) 75%,
+        hsl(var(--fx-primary)) 100%);
+      filter: blur(8px) saturate(1.2);
+      z-index: -1;
+      /* spinning animation removed */
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      padding: 1px; /* creates the border */
+      /* cutting out the middle to only show border glow */
+      mask-composite: exclude;
+      -webkit-mask-composite: xor;
+    }
+
+    /* glass card */
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px) saturate(1.2);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    /* floating glow orbs */
+    .orb { filter: blur(30px); opacity: .55; mix-blend-mode: screen; }
+    .float-slow { animation: float 12s ease-in-out infinite; }
+    .float-fast { animation: float 8s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0) scale(1); }
+      50% { transform: translateY(-16px) translateX(6px) scale(1.03); }
+    }
+
+    /* Pulsing CTA glow */
+    .pulse-glow { box-shadow: 0 0 0 0 hsla(var(--fx-primary), .6); animation: pulseGlow 2.4s ease-in-out infinite; }
+    @keyframes pulseGlow { 0% { box-shadow: 0 0 0 0 hsla(var(--fx-primary), .55) } 70% { box-shadow: 0 0 0 22px hsla(var(--fx-primary), 0) } 100% { box-shadow: 0 0 0 0 hsla(var(--fx-primary), 0) } }
+
+    /* ====== Animated SVG Line ====== */
+    .line-glow { filter: drop-shadow(0 0 12px hsla(var(--fx-accent), .9)) drop-shadow(0 0 32px hsla(var(--fx-secondary), .35)); }
+
+    /* draw on load */
+    .path-reveal { stroke-dasharray: 1500; stroke-dashoffset: 1500; animation: reveal 2.2s ease-out forwards; }
+    @keyframes reveal { to { stroke-dashoffset: 0; } }
+
+    /* subtle heartbeat pulse along the path */
+    .path-pulse { animation: pathPulse 4.2s ease-in-out infinite; }
+    @keyframes pathPulse { 0%, 100% { filter: drop-shadow(0 0 10px hsla(var(--fx-accent), .8)); } 50% { filter: drop-shadow(0 0 22px hsla(var(--fx-accent), 1)); } }
+
+    /* glimmering gradient stroke shift */
+    .move-gradient { animation: moveGrad 6s linear infinite; }
+    @keyframes moveGrad { 0% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -600; } }
+
+    /* prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      .float-slow, .float-fast, .pulse-glow, .path-reveal, .path-pulse, .move-gradient { animation: none !important; }
+    }
