@@ -578,8 +578,23 @@
         As you scroll, discover how each phase unlocks the next level of your trading journey.
       </p>
       <div class="mt-8">
-        <img src="assets/other/anime-5A.png" alt="How it works" class="w-full max-w-md mx-auto drop-shadow-2xl rounded-2xl" />
-      </div>
+  <picture>
+    <!-- WebP (preferred) -->
+    <source srcset="assets/other/anime-5A.webp" type="image/webp">
+
+    <!-- PNG fallback -->
+    <img 
+      src="assets/other/anime-5A.png" 
+      alt="How it works" 
+      class="w-full max-w-md mx-auto drop-shadow-2xl rounded-2xl"
+      width="800" 
+      height="600"
+      loading="lazy" 
+      decoding="async"
+    />
+  </picture>
+</div>
+
     </div>
 
     <!-- Right (Cards that stack on scroll) -->
@@ -798,12 +813,28 @@
 </div>
 
 
-      <div class="promo-pricing__video-wrapper">
-  <img src="assets/other/preview-stats.png" alt="Dashboard Preview" class="promo-pricing__image" />
+     <div class="promo-pricing__video-wrapper">
+  <picture>
+    <!-- WebP (preferred) -->
+    <source srcset="assets/other/preview-stats.webp" type="image/webp">
+
+    <!-- PNG fallback -->
+    <img 
+      src="assets/other/preview-stats.png" 
+      alt="Dashboard Preview" 
+      class="promo-pricing__image"
+      width="1200" 
+      height="675"
+      loading="lazy" 
+      decoding="async"
+    />
+  </picture>
+
   <a href="explore.html" class="px-3 py-2 sm:px-6 sm:py-3 hero-btn login">
     Explore <i class="fa fa-compass me-2"></i>
   </a>
 </div>
+
 
     </div>
   </div>
@@ -3073,43 +3104,58 @@
   });
     </script>
 
-  <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container" style="margin-top: 100px; margin-bottom: -25;">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-  {
-  "symbols": [
-    {
-      "proName": "FX:GBPUSD",
-      "title": "GBP/USD"
-    },
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "Bitcoin"
-    },
-    {
-      "proName": "OANDA:XAUUSD",
-      "title": "Gold"
-    },
-    {
-      "proName": "OANDA:EURUSD",
-      "title": "EUR/USD"
-    },
-    {
-      "proName": "CME_MINI:NQ1!",
-      "title": "Nasdaq100"
-    }
-  ],
-  "colorTheme": "dark",
-  "locale": "en",
-  "largeChartUrl": "",
-  "isTransparent": true,
-  "showSymbolLogo": true
-}
-  </script>
+ <!-- TradingView Widget BEGIN -->
+<div class="flex justify-center mt-24">
+  <div class="relative w-full max-w-5xl p-[2px] rounded-3xl overflow-hidden 
+              shadow-[0_0_30px_rgba(0,0,0,0.6)]">
+
+    <!-- Animated neon gradient border -->
+    <div class="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 
+                animate-[gradient_6s_linear_infinite] blur-2xl opacity-70"></div>
+    
+    <!-- Glassmorphic inner container -->
+    <div class="relative rounded-3xl backdrop-blur-xl bg-white/10 border border-white/20 p-8 
+                hover:scale-[1.02] transition-transform duration-500 shadow-[inset_0_0_30px_rgba(255,255,255,0.1)]">
+
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright text-center text-sm mt-3">
+          <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank" 
+             class="text-cyan-300 hover:text-pink-400 transition-colors duration-500">
+            Track all markets on TradingView
+          </a>
+        </div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+        {
+          "symbols": [
+            { "proName": "FX:GBPUSD", "title": "GBP/USD" },
+            { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" },
+            { "proName": "OANDA:XAUUSD", "title": "Gold" },
+            { "proName": "OANDA:EURUSD", "title": "EUR/USD" },
+            { "proName": "CME_MINI:NQ1!", "title": "Nasdaq100" }
+          ],
+          "colorTheme": "dark",
+          "locale": "en",
+          "largeChartUrl": "",
+          "isTransparent": true,
+          "showSymbolLogo": true
+        }
+        </script>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- TradingView Widget END -->
+
+<!-- Tailwind keyframes -->
+<style>
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
+
 
 
 
@@ -3185,12 +3231,12 @@
 
 <script>
   const payouts = [
-    { name: 'Lebo M.', amount: '$112.00', country: '🇿🇦', img: 'assets/certificates/1.png' },
-    { name: 'Amaka E.', amount: '$104.25', country: '🇬🇧', img: 'assets/certificates/7.png' },
-    { name: 'Ayesha K.', amount: '$87.00', country: '🇪🇸', img: 'assets/certificates/11.png' },
-    { name: 'Zinhle M.', amount: '$142.00', country: '🇿🇦', img: 'assets/certificates/4.png' },
-    { name: 'Tunde B.', amount: '$298.00', country: '🇨🇦', img: 'assets/certificates/8.png' },
-    { name: 'Liam T.', amount: '$263.40', country: '🇺🇸', img: 'assets/certificates/12.png' },
+    { name: 'Lebo M.', amount: '$112.00', country: '🇿🇦', img: 'assets/certificates/1' },
+    { name: 'Amaka E.', amount: '$104.25', country: '🇬🇧', img: 'assets/certificates/7' },
+    { name: 'Ayesha K.', amount: '$87.00', country: '🇪🇸', img: 'assets/certificates/11' },
+    { name: 'Zinhle M.', amount: '$142.00', country: '🇿🇦', img: 'assets/certificates/4' },
+    { name: 'Tunde B.', amount: '$298.00', country: '🇨🇦', img: 'assets/certificates/8' },
+    { name: 'Liam T.', amount: '$263.40', country: '🇺🇸', img: 'assets/certificates/12' },
   ];
 
   const grid = document.getElementById('payout-grid');
@@ -3199,7 +3245,12 @@
     card.className = "rounded-xl bg-gradient-to-br from-gray-50 via-blue-50 to-white border border-gray-200 shadow-lg p-5 text-gray-900 hover:scale-105 transform transition duration-300";
 
     card.innerHTML = `
-      <img src="${p.img}" alt="Payout Certificate" class="w-full h-48 object-cover rounded-lg mb-4 border border-gray-200">
+      <picture>
+        <source srcset="${p.img}.webp" type="image/webp">
+        <img src="${p.img}.png" alt="Payout Certificate" 
+             class="w-full h-48 object-cover rounded-lg mb-4 border border-gray-200"
+             loading="lazy" decoding="async" width="400" height="300">
+      </picture>
       <div class="flex justify-between items-center mb-2">
         <h4 class="text-xl font-bold text-blue-700">${p.name} ${p.country}</h4>
         <span class="text-blue-700 text-sm bg-blue-50 border border-blue-100 rounded-full px-3 py-1">Processed</span>
@@ -3211,6 +3262,7 @@
     grid.appendChild(card);
   });
 </script>
+
 
 <section class="relative py-20 bg-white overflow-hidden">
   <!-- Floating Glow Background -->
