@@ -70,6 +70,99 @@ body {
   border-top: none;
 }
 
+  .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.hero-btn {
+  padding: 16px 38px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.4s ease;
+  border: 2px solid transparent;
+  background: rgb(0, 0, 0);
+  backdrop-filter: blur(8px);
+  color: #000000;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.hero-btn:hover::before {
+  left: 100%;
+}
+
+.hero-btn.login {
+  border: 1px solid #4fa3ff;
+  background: transparent;
+}
+
+.hero-btn.login:hover {
+  color: #ffffff;
+  background: black;
+  box-shadow: 0 0 16px #4fa3ff;
+}
+
+.hero-btn.signup {
+   background: linear-gradient(to right, #00cfff, #005eff);
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+}
+
+.hero-btn.signup:hover {
+  box-shadow: 0 0 28px rgba(0, 204, 255, 0.6);
+}
+  /* Animation */
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+  
+    .hero-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }	  
+			
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 
 .glowing-border::before {
   content: '';
