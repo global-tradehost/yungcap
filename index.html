@@ -276,16 +276,40 @@
           </p>
 
           <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="#get-started" class="group relative inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white font-semibold bg-gradient-to-r from-cyan-600 via-indigo-600 to-purple-600 hover:from-cyan-500 hover:via-indigo-500 hover:to-purple-500 focus:outline-none transition-all pulse-glow">
-              <span class="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/15 to-transparent opacity-0 group-hover:opacity-100 transition"></span>
-             <span id="elite-text" class="relative font-bold text-xl tracking-wide"></span>
-              <svg class="ml-2 size-4 opacity-90 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H4a1 1 0 110-2h10.586l-2.293-2.293a1 1 0 010-1.414z"/></svg>
-            </a>
-            <a href="explore.html" class="inline-flex items-center justify-center rounded-2xl px-6 py-3 font-semibold text-neutral-700 bg-white border border-black hover:border-neutral-300 hover:bg-neutral-50 transition">
-              Explore Hub 
-            </a>
-          </div>
+       <div class="flex flex-col sm:flex-row gap-3">
+  <!-- Elite Button -->
+  <a href="#get-started" 
+     class="group relative inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white font-semibold 
+            bg-gradient-to-r from-cyan-600 via-indigo-600 to-purple-600 
+            hover:from-cyan-500 hover:via-indigo-500 hover:to-purple-500 
+            focus:outline-none transition-all pulse-glow">
+    
+    <!-- Shine Overlay -->
+    <span class="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/15 to-transparent opacity-0 group-hover:opacity-100 transition"></span>
+    
+    <!-- Text wrapper with ghost span to lock width -->
+    <span class="relative inline-block whitespace-nowrap">
+      <!-- Ghost span for consistent width -->
+      <span class="invisible inline-block">Start Trading Now</span>
+      <!-- Animated text -->
+      <span id="elite-text" class="absolute inset-0 flex items-center justify-center tracking-wide whitespace-nowrap"></span>
+    </span>
+
+    <!-- Arrow Icon -->
+    <svg class="ml-2 size-4 opacity-90 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor">
+      <path d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H4a1 1 0 110-2h10.586l-2.293-2.293a1 1 0 010-1.414z"/>
+    </svg>
+  </a>
+
+  <!-- Secondary Button -->
+  <a href="explore.html" 
+     class="inline-flex items-center justify-center rounded-2xl px-6 py-3 font-semibold 
+            text-neutral-700 bg-white border border-black 
+            hover:border-neutral-300 hover:bg-neutral-50 transition">
+    Explore Hub
+  </a>
+</div>
+
 
           <!-- mini trust row -->
           <div class="flex items-center gap-4 pt-4">
@@ -437,25 +461,31 @@
     })();
   </script>
 <script>
-  const eliteText = document.getElementById("elite-text");
-const messages = ["Start Trading Now", "Pay Later"];
-let index = 0;
+  const messages = ["Start Trading Now", "Pay Later"];
+  const textElement = document.getElementById("elite-text");
+  let index = 0;
 
-eliteText.textContent = messages[index];
+  // Initialize with first message
+  textElement.textContent = messages[index];
 
-// Elite fade loop
-setInterval(() => {
-  eliteText.style.transition = "opacity 0.8s ease-in-out, transform 0.8s ease-in-out";
-  eliteText.style.opacity = 0;
-  eliteText.style.transform = "translateY(-10px) scale(0.95)";
+  setInterval(() => {
+    // Fade/blur out
+    textElement.style.transition = "opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease";
+    textElement.style.opacity = 0;
+    textElement.style.transform = "translateY(-6px) scale(0.95)";
+    textElement.style.filter = "blur(2px)";
 
-  setTimeout(() => {
-    index = (index + 1) % messages.length;
-    eliteText.textContent = messages[index];
-    eliteText.style.opacity = 1;
-    eliteText.style.transform = "translateY(0) scale(1)";
-  }, 800);
-}, 3000);
+    setTimeout(() => {
+      // Switch message
+      index = (index + 1) % messages.length;
+      textElement.textContent = messages[index];
+
+      // Fade/blur back in
+      textElement.style.opacity = 1;
+      textElement.style.transform = "translateY(0) scale(1)";
+      textElement.style.filter = "blur(0)";
+    }, 600);
+  }, 3000);
 </script>
 
 <!-- Floating MT5 Card -->
@@ -590,11 +620,6 @@ setInterval(() => {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  #elite-text {
-  display: inline-block;
-  color: #111;
-  text-shadow: 0 0 15px rgba(0,145,241,0.4);
-}
 </style>
 
 <section class="relative bg-white text-black py-20">
