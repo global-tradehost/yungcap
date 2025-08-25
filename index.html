@@ -546,14 +546,21 @@
         </div>
       </div>
 
-      <div class="bg-white/60 backdrop-blur-xl border border-black/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition duration-500 flex flex-col justify-between">
-        <div>
-          <h3 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-black to-blue-400 bg-clip-text text-transparent mb-4">Traders Worldwide</h3>
-          <p class="text-2xl font-semibold text-[#00aaff]">37,000+</p>
-        </div>
-        <img src="https://cdn.prod.website-files.com/66dfd301f582ed13bfe5e807/67f7954a872181730584fa3d_traders-globally-37.svg" alt="Traders Global" class="mt-6 w-full rounded-xl">
-      </div>
-    </div>
+     <div class="relative bg-white/60 backdrop-blur-xl border border-black/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition duration-500 flex flex-col justify-between h-64">
+  <!-- Content -->
+  <div class="z-10">
+    <h3 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-black to-blue-400 bg-clip-text text-transparent mb-4">
+      Traders Worldwide
+    </h3>
+    <p class="text-2xl font-semibold text-[#00aaff]">37,000+</p>
+  </div>
+
+  <!-- Background Image -->
+  <div class="absolute inset-0 rounded-3xl bg-no-repeat bg-right bg-contain opacity-90"
+       style="background-image: url('https://cdn.prod.website-files.com/66dfd301f582ed13bfe5e807/67f7954a872181730584fa3d_traders-globally-37.svg');">
+  </div>
+</div>
+
   </div>
 </section>
 
