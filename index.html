@@ -277,9 +277,9 @@
 
           <!-- CTAs -->
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="https://yungfxcapital.infy.uk/get-started.php" class="group relative inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white font-semibold bg-gradient-to-r from-cyan-600 via-indigo-600 to-purple-600 hover:from-cyan-500 hover:via-indigo-500 hover:to-purple-500 focus:outline-none transition-all pulse-glow">
+            <a href="#get-started" class="group relative inline-flex items-center justify-center rounded-2xl px-6 py-3 text-white font-semibold bg-gradient-to-r from-cyan-600 via-indigo-600 to-purple-600 hover:from-cyan-500 hover:via-indigo-500 hover:to-purple-500 focus:outline-none transition-all pulse-glow">
               <span class="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/15 to-transparent opacity-0 group-hover:opacity-100 transition"></span>
-              <span class="relative">Start Trading Now</span>
+             <span id="elite-text" class="relative font-bold text-xl tracking-wide"></span>
               <svg class="ml-2 size-4 opacity-90 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H4a1 1 0 110-2h10.586l-2.293-2.293a1 1 0 010-1.414z"/></svg>
             </a>
             <a href="explore.html" class="inline-flex items-center justify-center rounded-2xl px-6 py-3 font-semibold text-neutral-700 bg-white border border-black hover:border-neutral-300 hover:bg-neutral-50 transition">
@@ -436,7 +436,27 @@
       setTimeout(() => requestAnimationFrame(loop), 2300);
     })();
   </script>
+<script>
+  const eliteText = document.getElementById("elite-text");
+const messages = ["Start Trading Now", "Pay Later"];
+let index = 0;
 
+eliteText.textContent = messages[index];
+
+// Elite fade loop
+setInterval(() => {
+  eliteText.style.transition = "opacity 0.8s ease-in-out, transform 0.8s ease-in-out";
+  eliteText.style.opacity = 0;
+  eliteText.style.transform = "translateY(-10px) scale(0.95)";
+
+  setTimeout(() => {
+    index = (index + 1) % messages.length;
+    eliteText.textContent = messages[index];
+    eliteText.style.opacity = 1;
+    eliteText.style.transform = "translateY(0) scale(1)";
+  }, 800);
+}, 3000);
+</script>
 
 <!-- Floating MT5 Card -->
 <div id="mt5Card" class="fixed right-4 bottom-20 sm:bottom-24 z-50 transition-opacity duration-500 ease-in-out opacity-100">
@@ -570,6 +590,11 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  #elite-text {
+  display: inline-block;
+  color: #111;
+  text-shadow: 0 0 15px rgba(0,145,241,0.4);
+}
 </style>
 
 <section class="relative bg-white text-black py-20">
@@ -721,7 +746,7 @@
             <span style="color: #ffffff !important;">Price: $44.99 USD<br><a style="color: #ffffff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
             <hr />
           </div>
-          <a href="#get-started" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">SOLD OUT</a>
+          <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=50000" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">SOLD OUT</a>
         </div>
         <div class="promo-pricing__card bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl" id="tab-50k">
           <div class="brics-header-section">
@@ -757,7 +782,7 @@
             <span style="color: #ffffff !important;">Price: $79.99 USD<br><a style="color: #ffffff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
             <hr />
           </div>
-          <a href="https://yungfxcapital.infy.uk/get-started.php" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">Get Started</a>
+          <a href="https://yungfxcapital.infy.uk/get-started.php?type=Starter&capital=100000" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">Get Started</a>
         </div>
         <div class="promo-pricing__card active bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl" id="tab-100k">
           <div class="brics-header-section">
@@ -793,7 +818,7 @@
             <span style="color: #ffffff !important;">Price: $102 USD<br><a style="color: #ffffff;" onclick="window.location.href='explore.html';">Read More Specifications</a></span>
             <hr />
           </div>
-          <a href="https://yungfxcapital.infy.uk/get-started.php" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">Get Started</a>
+          <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=200000" class="promo-pricing__purchase-btn px-3 py-2 sm:px-6 sm:py-3 hero-btn signup">Get Started</a>
         </div>
       </div>
       <div class="promo-pricing__info-card bg-gradient-to-br from-black/5 via-blue-500/2 to-blue-500/5 backdrop-blur-xl">
@@ -1260,7 +1285,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Starter&capital=2500" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1303,7 +1328,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Starter&capital=5000" class="btn">Sign Up!</a>>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1346,7 +1371,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Starter&capital=10000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1389,7 +1414,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+             <a href="https://yungfxcapital.infy.uk/get-started.php?type=Starter&capital=25000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1433,7 +1458,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Starter&capital=100000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1476,7 +1501,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Starter&capital=200000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1519,7 +1544,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Starter&capital=400000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1562,7 +1587,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Starter&capital=800000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1613,7 +1638,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+             <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=1000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1656,7 +1681,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=2500" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1699,7 +1724,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+             <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=5000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1742,7 +1767,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=10000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->            
@@ -1786,7 +1811,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+             <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=50000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1829,7 +1854,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+             <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=100000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1872,7 +1897,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+             <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=200000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1915,7 +1940,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+             <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=400000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -1958,7 +1983,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=800000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2009,7 +2034,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=1000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2052,7 +2077,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+               <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=2500" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2095,7 +2120,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+               <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=5000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2138,7 +2163,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+               <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=10000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2181,7 +2206,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=25000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2224,7 +2249,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+               <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=50000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2267,7 +2292,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=100000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2310,7 +2335,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+               <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=200000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2353,7 +2378,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+               <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=400000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2396,7 +2421,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=800000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2447,7 +2472,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+               <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=1000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2490,7 +2515,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=2500" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2533,7 +2558,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=5000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2576,7 +2601,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=10000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2619,7 +2644,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+             <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=25000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2662,7 +2687,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=50000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2701,11 +2726,11 @@
             </div>
             <div class="divider">
               <hr />
-              <span>Price: $15.99 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
+              <span>Price: $1275.99 USD<br><a onclick="openModal('positionTradingModal')">Read More Specifications</a></span>
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=100000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2748,7 +2773,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=200000" class="btn">Sign Up!</a>>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2791,7 +2816,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=400000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2834,7 +2859,7 @@
               <hr />
             </div>
             <div class="card-footer">
-              <a href="https://yungfxcapital.infy.uk/get-started.php" class="btn">Sign Up!</a>
+              <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=800000" class="btn">Sign Up!</a>
             </div>
             </div>
             <!-- BricsNetwork Pricing Card End -->
@@ -2862,7 +2887,7 @@
             <li><span class="spec-icon">&#x2714;</span> Minimum Withdrawal: +$25 </li>
             <li><span class="spec-icon">&#x2714;</span> 25K+ Accounts: Payout-On-Demand</li>
           </ul>
-          <a href="https://yungfxcapital.infy.uk/get-started.php" target="_blank" class="learn-more-button">Get Stared</a>
+          <a href="https://yungfxcapital.infy.uk/get-started.php?type=Starter&capital=1000" target="_blank" class="learn-more-button">Get Stared</a>
         </div>
       </div>
     
@@ -2878,7 +2903,7 @@
             <li><span class="spec-icon">&#x2714;</span> Minimum Withdrawal: +$25 </li>
             <li><span class="spec-icon">&#x2714;</span> 25K+ Accounts: Payout-On-Demand</li>
           </ul>
-          <a href="https://yungfxcapital.infy.uk/get-started.php" target="_blank" class="learn-more-button">Get Started</a>
+          <a href="https://yungfxcapital.infy.uk/get-started.php?type=Standard&capital=1000" target="_blank" class="learn-more-button">Get Started</a>
         </div>
       </div>
     
@@ -2894,7 +2919,7 @@
             <li><span class="spec-icon">&#x2714;</span> Minimum Withdrawal: +$25 </li>
             <li><span class="spec-icon">&#x2714;</span> 25K+ Accounts: Payout-On-Demand</li>
           </ul>
-          <a href="https://yungfxcapital.infy.uk/get-started.php" target="_blank" class="learn-more-button">Get Started</a>
+          <a href="https://yungfxcapital.infy.uk/get-started.php?type=Rapid&capital=1000" target="_blank" class="learn-more-button">Get Started</a>
         </div>
       </div>
     
@@ -2910,7 +2935,7 @@
             <li><span class="spec-icon">&#x2714;</span> Minimum Withdrawal: +$25 </li>
             <li><span class="spec-icon">&#x2714;</span> 25K+ Accounts: Payout-On-Demand</li>
           </ul>
-          <a href="https://yungfxcapital.infy.uk/get-started.php" target="_blank" class="learn-more-button">Get Started</a>
+          <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=1000" target="_blank" class="learn-more-button">Get Started</a>
         </div>
       </div>
 
