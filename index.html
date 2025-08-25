@@ -259,9 +259,16 @@
           </div>
 
           <h1 class="text-4xl/tight sm:text-5xl/tight lg:text-6xl/tight font-extrabold tracking-tight">
-            <span class="bg-gradient-to-r from-cyan-600 via-indigo-700 to-slate-900 bg-clip-text text-transparent">Imagine A World of </span>
-            <span class="block text-slate-900">Top Traders</span> Funded
+            <span class="bg-gradient-to-r from-cyan-600 via-indigo-700 to-slate-900 bg-clip-text text-transparent">
+              Imagine A World of
+            </span>
+            <span class="block text-slate-900">Top Traders</span>
+            <span class="relative inline-block px-3 corner-brackets">
+              Funded
+              <span></span>
+            </span>
           </h1>
+          
 
           <p class="max-w-xl text-base sm:text-lg text-neutral-700">
             Get Instant Access To Trading Capital Up To $400K. 
@@ -3103,28 +3110,26 @@
     }
   });
     </script>
-
- <!-- TradingView Widget BEGIN -->
-<div class="flex justify-center mt-24">
+<!-- TradingView Widget BEGIN -->
+<div class="flex justify-center mt-24 mb-20">
   <div class="relative w-full max-w-5xl p-[2px] rounded-3xl overflow-hidden 
-              shadow-[0_0_30px_rgba(0,0,0,0.6)]">
+              shadow-[0_0_10px_rgba(0,0,0,0.6)]">
 
     <!-- Animated neon gradient border -->
-    <div class="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 
-                animate-[gradient_6s_linear_infinite] blur-2xl opacity-70"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-black
+                animate-[gradient_6s_linear_infinite] blur-2xl opacity-90"></div>
     
     <!-- Glassmorphic inner container -->
-    <div class="relative rounded-3xl backdrop-blur-xl bg-white/10 border border-white/20 p-8 
-                hover:scale-[1.02] transition-transform duration-500 shadow-[inset_0_0_30px_rgba(255,255,255,0.1)]">
+    <div class="relative rounded-3xl backdrop-blur-xl bg-white/5 border border-white/20 p-4 
+                hover:scale-[1.02] transition-transform duration-500 
+                shadow-[inset_0_0_20px_rgba(255,255,255,0.08)]">
 
-      <div class="tradingview-widget-container">
+      <!-- Widget wrapper (scales down TradingView) -->
+      <div class="tradingview-widget-container text-sm">
         <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright text-center text-sm mt-3">
-          <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank" 
-             class="text-cyan-300 hover:text-pink-400 transition-colors duration-500">
-            Track all markets on TradingView
-          </a>
-        </div>
+
+      
+        <!-- TradingView Script -->
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
         {
           "symbols": [
@@ -3138,7 +3143,7 @@
           "locale": "en",
           "largeChartUrl": "",
           "isTransparent": true,
-          "showSymbolLogo": true
+          "showSymbolLogo": false
         }
         </script>
       </div>
@@ -3154,7 +3159,17 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* Override ugly TradingView defaults */
+.tradingview-widget-container__widget {
+  transform: scale(0.9);     /* shrink */
+  transform-origin: center;  /* keep centered */
+}
+.tradingview-widget-container iframe {
+  border-radius: 1rem !important;
+}
 </style>
+
 
 
 
