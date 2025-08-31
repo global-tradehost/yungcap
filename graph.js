@@ -93,7 +93,7 @@ document.querySelectorAll('.promo-pricing__tab').forEach(button => {
 });
 
 function updateCountdown() {
-  const endDate = new Date('2025-08-28T00:00:00');
+  const endDate = new Date('2025-09-05T00:00:00');
   const now = new Date();
   const diff = endDate - now;
 
@@ -182,3 +182,4 @@ window.addEventListener("scroll", function () {
       card.style.opacity = "1";
     }
   });
+
