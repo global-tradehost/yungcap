@@ -20,8 +20,8 @@ function slideCards() {
 function startCountdown() {
     const countdownElement = document.getElementById("countdown");
 
-    // Set fixed target date: 02 May, 2025 at midnight (00:00:00)
-    const targetTime = new Date("August 30, 2025 00:00:00").getTime();
+    // Set fixed target date: 05 September, 2025 at midnight (00:00:00)
+    const targetTime = new Date("September 05, 2025 00:00:00").getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
