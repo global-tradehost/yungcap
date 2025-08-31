@@ -3882,14 +3882,14 @@
 <script>
   document.addEventListener("tidioChat-ready", function () {
     function adjustTidioMargin() {
-      const chat = document.querySelector("#tidio-chat iframe");
-      if (chat) {
+      const chatIframe = document.getElementById("tidio-chat-iframe");
+      if (chatIframe) {
         if (window.innerWidth <= 768) {
           // Mobile
-          chat.style.bottom = "50px";
+          chatIframe.style.bottom = "20px";
         } else {
           // Desktop
-          chat.style.bottom = "10px";
+          chatIframe.style.bottom = "10px";
         }
       }
     }
@@ -3901,6 +3901,7 @@
     window.addEventListener("resize", adjustTidioMargin);
   });
 </script>
+
 
   <script src="script.js"></script>
   <script src="graph.js"></script>
