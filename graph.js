@@ -140,7 +140,7 @@ window.addEventListener("scroll", function () {
   const scrollPercent = (scrollTop / docHeight) * 100;
 
   const bar = document.querySelector(".elite-countdown-bar");
-  if (scrollPercent > 5) {
+  if (scrollPercent > 70) {
     bar.classList.add("visible");
   } else {
     bar.classList.remove("visible");
@@ -182,4 +182,5 @@ window.addEventListener("scroll", function () {
       card.style.opacity = "1";
     }
   });
+
 
