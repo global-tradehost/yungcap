@@ -3877,8 +3877,31 @@
         ? [...crypto.getRandomValues(new Uint8Array(6))].map(b=>b.toString(16).padStart(2,'0')).join('')
         : Math.random().toString(16).slice(2, 14);
     </script>
-<!-- Load Tidio
-<script src="//code.tidio.co/htkubm7fykoeyemktdyhlyjrod3vz33h.js" async></script>  -->
+<script src="//code.tidio.co/htkubm7fykoeyemktdyhlyjrod3vz33h.js" async></script>
+
+<script>
+  document.addEventListener("tidioChat-ready", function () {
+    function adjustTidioMargin() {
+      const chat = document.querySelector("#tidio-chat iframe");
+      if (chat) {
+        if (window.innerWidth <= 768) {
+          // Mobile
+          chat.style.bottom = "20px";
+        } else {
+          // Desktop
+          chat.style.bottom = "10px";
+        }
+      }
+    }
+
+    // Run on load
+    adjustTidioMargin();
+
+    // Run on resize
+    window.addEventListener("resize", adjustTidioMargin);
+  });
+</script>
+
   <script src="script.js"></script>
   <script src="graph.js"></script>
 </body>
