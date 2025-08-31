@@ -3864,7 +3864,7 @@
     <span class="elite-label">🚨 Next Price Increase In:</span>
     <span id="elite-countdown"></span>
   </div>
-  <a href="blogs/price-value-increase.html" class="elite-btn">Learn Why?</a>
+  <a href="https://yungfxcapital.infy.uk/get-started.php?type=Growth&capital=200000" class="elite-btn">Get Funded</a>
 </div>
  <script>
       // Populate dynamic bits
@@ -3880,27 +3880,92 @@
 <script src="//code.tidio.co/htkubm7fykoeyemktdyhlyjrod3vz33h.js" async></script>
 
 <script>
-  document.addEventListener("tidioChat-ready", function () {
-    function adjustTidioMargin() {
-      const chatIframe = document.getElementById("tidio-chat-iframe");
-      if (chatIframe) {
-        if (window.innerWidth <= 768) {
-          // Mobile
-          chatIframe.style.bottom = "20px";
-        } else {
-          // Desktop
-          chatIframe.style.bottom = "10px";
-        }
+  (function () {
+    const THRESHOLD = 0.60; // 60% of page height
+
+    // All likely containers/iframes Tidio injects.
+    const TIDIO_SELECTORS = [
+      '#tidio-chat',
+      'iframe#tidio-chat-iframe',
+      'iframe[title="Tidio Chat"]',
+      'iframe[id^="tidio-"]',
+      'div[data-tidio-chat]',
+      'div[id^="tidio-"][style*="z-index"]'
+    ];
+
+    function getTidioNodes() {
+      const set = new Set();
+      TIDIO_SELECTORS.forEach(sel => {
+        document.querySelectorAll(sel).forEach(n => set.add(n));
+      });
+      // Exclude the hidden loader iframe if present
+      return Array.from(set).filter(n => !(n.id === 'tidio-chat-code' || n.style.display === 'none'));
+    }
+
+    function pageScrollPercent() {
+      const d = document.documentElement;
+      const scrollTop = window.pageYOffset || d.scrollTop || 0;
+      const scrollable = Math.max(d.scrollHeight - window.innerHeight, 0);
+      return scrollable === 0 ? 0 : scrollTop / scrollable;
+    }
+
+    let cachedNodes = [];
+    function hideTidio() {
+      cachedNodes = getTidioNodes();
+      cachedNodes.forEach(n => {
+        if (n.dataset.prevDisplay === undefined) n.dataset.prevDisplay = n.style.display || '';
+        n.style.display = 'none';
+      });
+    }
+
+    function showTidio() {
+      if (cachedNodes.length === 0) cachedNodes = getTidioNodes();
+      cachedNodes.forEach(n => {
+        const prev = n.dataset.prevDisplay;
+        n.style.display = prev !== undefined ? prev : '';
+      });
+    }
+
+    function updateVisibility() {
+      const pct = pageScrollPercent();
+      if (pct > THRESHOLD) {
+        hideTidio();
+      } else {
+        showTidio();
       }
     }
 
-    // Run on load
-    adjustTidioMargin();
+    // Efficient scroll handling
+    let ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          updateVisibility();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
 
-    // Run on resize
-    window.addEventListener("resize", adjustTidioMargin);
-  });
+    // Run on load, once Tidio is ready, and whenever DOM changes (in case Tidio reinjects)
+    function boot() {
+      updateVisibility();
+
+      // Observe for Tidio reinjections
+      const mo = new MutationObserver(() => updateVisibility());
+      mo.observe(document.body, { childList: true, subtree: true });
+    }
+
+    // If Tidio fires this event, use it; otherwise just boot after DOM is ready.
+    document.addEventListener('tidioChat-ready', boot);
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      setTimeout(boot, 0);
+    } else {
+      document.addEventListener('DOMContentLoaded', boot);
+    }
+  })();
 </script>
+
 
 
   <script src="script.js"></script>
