@@ -290,7 +290,7 @@
     <!-- Text wrapper with ghost span to lock width -->
     <span class="relative inline-block whitespace-nowrap">
       <!-- Ghost span for consistent width -->
-      <span class="invisible inline-block">Start Trading Now</span>
+      <span class="inline-block">Start Trading Now</span>
       <!-- Animated text -->
       <span id="elite-text" class="absolute inset-0 flex items-center justify-center tracking-wide whitespace-nowrap"></span>
     </span>
@@ -460,33 +460,7 @@
       setTimeout(() => requestAnimationFrame(loop), 2300);
     })();
   </script>
-<script>
-  const messages = ["Start Trading Now", "Pay Later"];
-  const textElement = document.getElementById("elite-text");
-  let index = 0;
 
-  // Initialize with first message
-  textElement.textContent = messages[index];
-
-  setInterval(() => {
-    // Fade/blur out
-    textElement.style.transition = "opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease";
-    textElement.style.opacity = 0;
-    textElement.style.transform = "translateY(-6px) scale(0.95)";
-    textElement.style.filter = "blur(2px)";
-
-    setTimeout(() => {
-      // Switch message
-      index = (index + 1) % messages.length;
-      textElement.textContent = messages[index];
-
-      // Fade/blur back in
-      textElement.style.opacity = 1;
-      textElement.style.transform = "translateY(0) scale(1)";
-      textElement.style.filter = "blur(0)";
-    }, 600);
-  }, 3000);
-</script>
 
 <!-- Floating MT5 Card -->
 <div id="mt5Card" class="fixed right-4 bottom-20 sm:bottom-24 z-50 transition-opacity duration-500 ease-in-out opacity-100">
@@ -726,7 +700,7 @@
 
 
 
-<!-- Brand Header -->
+<!-- 
 <section class="mt-24 px-4 text-center" style="margin-bottom: 25px;">
   <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-black to-blue-500 bg-clip-text text-transparent bg-clip-text drop-shadow-md">
    Our Limited Offers
@@ -859,7 +833,7 @@
       </div>
     </div> 
     <div class="promo-pricing__right">
-     <!-- Sidebar Features + Video -->
+  
    <div class="lg:col-span-5 space-y-10">
   <div class="p-6 bg-gradient-to-br from-white via-blue-50 to-blue-100 backdrop-blur-xl border border-black/10 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.05)]">
     <h3 class="text-xl font-semibold tracking-tight bg-gradient-to-r from-blue-600 via-black to-blue-400 bg-clip-text text-transparent mb-4">#1 Traders Choice</h3>
@@ -879,10 +853,8 @@
 
      <div class="promo-pricing__video-wrapper">
   <picture>
-    <!-- WebP (preferred) -->
     <source srcset="assets/other/preview-stats.webp" type="image/webp">
 
-    <!-- PNG fallback -->
     <img 
       src="assets/other/preview-stats.png" 
       alt="Dashboard Preview" 
@@ -903,6 +875,8 @@
     </div>
   </div>
 </section>
+-->
+
 <style>
 .promo-pricing {
   display: flex;
