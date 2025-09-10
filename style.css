@@ -179,6 +179,71 @@ body {
   filter: blur(6px); /* Soft glow */
 }
 
+ :root{
+      --panel:#000000f1;           /* near-black panel for contrast on white page */
+      --panel-2:#0f1720;        /* subtle second shade */
+      --accent-gold:linear-gradient(90deg,#ffd166,#ff9f1c);
+      --muted:rgba(255,255,255,0.66);
+    }
+
+    /* Elevated dark glass panels for high contrast on white background */
+    .elite-panel{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      background-color: var(--panel);
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 10px 30px rgba(9,12,15,0.18), inset 0 1px 0 rgba(255,255,255,0.02);
+      backdrop-filter: blur(6px) saturate(120%);
+    }
+
+    /* Headline gradient stroke for premium feel */
+    .headline-gradient{
+      background: var(--accent-gold);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      -webkit-text-fill-color:transparent;
+    }
+
+    /* Digital segmented digits style */
+    .digit {
+      font-variant-numeric: tabular-nums;
+      letter-spacing: .02em;
+      transition: transform .36s cubic-bezier(.2,.9,.3,1), opacity .28s ease;
+      will-change: transform, opacity;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.06));
+      border: 1px solid rgba(255,255,255,0.04);
+      box-shadow: 0 6px 16px rgba(2,6,10,0.35);
+    }
+    .digit-pop {
+      transform: translateY(-6px) scale(1.04);
+      opacity: .02;
+    }
+
+    /* Verified 3D vibe */
+    .cert-item {
+      transition: transform .6s cubic-bezier(.2,.9,.3,1), opacity .45s ease, filter .45s ease;
+      will-change: transform, opacity, filter;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.03);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+    }
+
+    /* CTA polish */
+    .cta-100 {
+      background: linear-gradient(90deg,#ffd57e,#ff9f1c);
+      box-shadow: 0 10px 30px rgba(255,159,28,0.18), 0 2px 6px rgba(0,0,0,0.25);
+    }
+
+    /* focus visible */
+    .focus-ring:focus { outline: 3px solid rgba(255,209,102,0.14); outline-offset: 4px; border-radius: 12px; }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .digit, .cert-item, .cta-100 { transition: none !important; animation: none !important; }
+    }
+
+
 		/* Parent container */
 .ccontainer {
 	display: flex;
