@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elite Funding Launch — Yung FX Capital</title>
+  <!-- Prevent search engines from indexing -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Tailwind CDN for demo; replace with your build pipeline in production -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --panel:#0b0f12;           /* near-black panel for contrast on white page */
+      --panel-2:#0f1720;        /* subtle second shade */
+      --accent-gold:linear-gradient(90deg,#ffd166,#ff9f1c);
+      --muted:rgba(255,255,255,0.66);
+    }
+
+    /* Elevated dark glass panels for high contrast on white background */
+    .elite-panel{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      background-color: var(--panel);
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 10px 30px rgba(9,12,15,0.18), inset 0 1px 0 rgba(255,255,255,0.02);
+      backdrop-filter: blur(6px) saturate(120%);
+    }
+
+    /* Headline gradient stroke for premium feel */
+    .headline-gradient{
+      background: var(--accent-gold);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      -webkit-text-fill-color:transparent;
+    }
+
+    /* Digital segmented digits style */
+    .digit {
+      font-variant-numeric: tabular-nums;
+      letter-spacing: .02em;
+      transition: transform .36s cubic-bezier(.2,.9,.3,1), opacity .28s ease;
+      will-change: transform, opacity;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.06));
+      border: 1px solid rgba(255,255,255,0.04);
+      box-shadow: 0 6px 16px rgba(2,6,10,0.35);
+    }
+    .digit-pop {
+      transform: translateY(-6px) scale(1.04);
+      opacity: .02;
+    }
+
+    /* Verified 3D vibe */
+    .cert-item {
+      transition: transform .6s cubic-bezier(.2,.9,.3,1), opacity .45s ease, filter .45s ease;
+      will-change: transform, opacity, filter;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.03);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+    }
+
+    /* CTA polish */
+    .cta-100 {
+      background: linear-gradient(90deg,#ffd57e,#ff9f1c);
+      box-shadow: 0 10px 30px rgba(255,159,28,0.18), 0 2px 6px rgba(0,0,0,0.25);
+    }
+
+    /* focus visible */
+    .focus-ring:focus { outline: 3px solid rgba(255,209,102,0.14); outline-offset: 4px; border-radius: 12px; }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .digit, .cert-item, .cta-100 { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-50 antialiased">
+
+  <!-- SECTION: container designed to sit on white body -->
+  <section id="elite-funding" class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+    <div class="elite-panel rounded-3xl p-6 md:p-8 lg:p-10">
+      <!-- subtle white page edge glow to separate from white background -->
+      <div class="absolute inset-x-0 -top-6 pointer-events-none" aria-hidden>
+        <div class="mx-auto w-72 h-2 rounded-full opacity-6" style="background: linear-gradient(90deg, rgba(255,209,102,0.15), transparent);"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <!-- LEFT: Text / Urgency -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="flex items-center mt-10 gap-3">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50/6 text-amber-300 border border-amber-300/10">LIMITED TRANCHE</span>
+            <div class="text-sm text-amber-50/60">Offer closes — September 14, 2025</div>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight headline-gradient">
+            $1,200,000 Live Funding — Elite Access
+          </h1>
+
+          <p class="text-slate-200 text-lg md:text-xl max-w-2xl">
+            One allocation. Institutional-grade capital. Pay <span class="font-semibold text-amber-200">$329</span> to trade with a $1.2M live account. No consistency rules. Payouts after your first trade. This is the tranche that changes careers.
+          </p>
+
+         <!-- Countdown: darker, very high-contrast digits for white background -->
+<div class="mt-4">
+  <div
+    class="flex flex-col sm:flex-row sm:items-center gap-4 p-3 rounded-2xl bg-gradient-to-b from-black/10 to-black/5 border border-white/6"
+  >
+    <!-- Digits -->
+    <div class="flex justify-between sm:justify-start gap-2 sm:gap-3 w-full sm:w-auto">
+      <div class="text-center flex-1 min-w-[60px]">
+        <div
+          id="cd-days"
+          class="digit rounded-xl py-2 px-1 text-lg sm:text-2xl md:text-3xl font-mono font-semibold text-slate-100"
+        >
+          00
+        </div>
+        <div class="text-[10px] sm:text-[11px] mt-1 text-slate-300 uppercase">Days</div>
+      </div>
+      <div class="text-center flex-1 min-w-[60px]">
+        <div
+          id="cd-hours"
+          class="digit rounded-xl py-2 px-1 text-lg sm:text-2xl md:text-3xl font-mono font-semibold text-slate-100"
+        >
+          00
+        </div>
+        <div class="text-[10px] sm:text-[11px] mt-1 text-slate-300 uppercase">Hours</div>
+      </div>
+      <div class="text-center flex-1 min-w-[60px]">
+        <div
+          id="cd-mins"
+          class="digit rounded-xl py-2 px-1 text-lg sm:text-2xl md:text-3xl font-mono font-semibold text-slate-100"
+        >
+          00
+        </div>
+        <div class="text-[10px] sm:text-[11px] mt-1 text-slate-300 uppercase">Minutes</div>
+      </div>
+      <div class="text-center flex-1 min-w-[60px]">
+        <div
+          id="cd-secs"
+          class="digit rounded-xl py-2 px-1 text-lg sm:text-2xl md:text-3xl font-mono font-semibold text-slate-100"
+        >
+          00
+        </div>
+        <div class="text-[10px] sm:text-[11px] mt-1 text-slate-300 uppercase">Seconds</div>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="text-xs sm:text-sm text-slate-300 sm:ml-4">
+      <div class="font-medium leading-snug">
+        Final tranche — capacity will close permanently.
+      </div>
+      <div class="text-[11px] sm:text-xs text-amber-200/90 mt-1">
+        Decision deadline:
+        <strong class="text-amber-100">Sept 14, 2025 • 23:59 SAST</strong>
+      </div>
+    </div>
+  </div>
+  <div id="cd-announcer" aria-live="polite" class="sr-only"></div>
+</div>
+
+
+          <!-- CTA group -->
+          <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-3">
+            <a href="#purchase" class="focus-ring inline-flex items-center gap-3 justify-center rounded-xl py-3 px-5 cta-100 text-black font-semibold shadow-lg hover:shadow-2xl transform hover:scale-[1.01] active:scale-[0.995] transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2v20M2 12h20" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Purchase Now — $329
+            </a>
+
+            <a href="#specs" class="ml-0 sm:ml-3 text-sm text-slate-300 hover:text-white transition focus-ring inline-flex items-center gap-2 px-3 py-2 rounded-lg">
+              Read full specifications
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+            <div class="rounded-2xl elite-panel p-4 md:p-5 border border-white/6">
+            <div class="flex items-center justify-between mb-3">
+              <div class="text-sm text-slate-300 font-semibold">Verified Verifieds</div>
+              <div class="flex items-center gap-2">
+                <button id="cert-prev" class="p-2 rounded-md bg-black/10 hover:scale-[1.03] focus-ring" aria-label="Previous Verified">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <button id="cert-next" class="p-2 rounded-md bg-black/10 hover:scale-[1.03] focus-ring" aria-label="Next Verified">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div id="cert-carousel" class="relative flex items-center justify-center overflow-hidden">
+              <div id="cert-track" class="flex gap-4 will-change-transform" style="transform: translateX(0%);">
+                <img src="assets/mil-story/mstory1.jpg" alt="Verified" class="cert-item w-40 md:w-44 lg:w-52 shadow-md object-cover" draggable="false" />
+                <img src="assets/mil-story/mstory2.jpg" alt="Verified" class="cert-item w-40 md:w-44 lg:w-52 shadow-md object-cover" draggable="false" />
+                <img src="assets/mil-story/mstory11.jpg" alt="Verified" class="cert-item w-40 md:w-44 lg:w-52 shadow-md object-cover" draggable="false" />
+                <img src="assets/mil-story/mstory12.jpg" alt="Verified" class="cert-item w-40 md:w-44 lg:w-52 shadow-md object-cover" draggable="false" />
+                <img src="assets/mil-story/mstory13.jpg" alt="Verified" class="cert-item w-40 md:w-44 lg:w-52 shadow-md object-cover" draggable="false" />
+                <img src="assets/mil-story/mstory14.jpg" alt="Verified" class="cert-item w-40 md:w-44 lg:w-52 shadow-md object-cover" draggable="false" />
+                <img src="assets/mil-story/mstory15.jpg" alt="Verified" class="cert-item w-40 md:w-44 lg:w-52 shadow-md object-cover" draggable="false" />
+                <img src="assets/mil-story/mstory16.jpg" alt="Verified" class="cert-item w-40 md:w-44 lg:w-52 shadow-md object-cover" draggable="false" />
+              </div>
+            </div>
+
+            <div class="mt-3 text-xs text-slate-400">Instantly Get Verified — After purchase receive your elite funded certificate.</div>
+          </div>
+
+          <!-- credibility row -->
+          <div class="mt-6 flex items-center gap-5 text-sm">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-slate-800 to-slate-700 flex items-center justify-center border border-white/5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-amber-300"><path d="M12 2l3 6 6 .5-4.5 4 1 6L12 17l-5.5 2.5 1-6L3 8.5 9 8 12 2z" stroke="currentColor" stroke-width="0.6" fill="currentColor"/></svg>
+              </div>
+              <div class="text-slate-300">
+                <div class="font-semibold">Institutional-Grade Capital</div>
+                <div class="text-xs text-slate-400">Personalized Dashboard • Advance Analytics</div>
+              </div>
+            </div>
+
+            <div class="h-6 w-px bg-white/6 mx-3"></div>
+
+            <div class="text-slate-300 text-sm">
+              <span class="font-semibold">Profit Split</span> — <span class="text-amber-200 font-bold">Up to 85%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Media, Pricing, Verifieds -->
+        <div class="lg:col-span-6 space-y-6">
+          <!-- Video panel -->
+          <div class="rounded-2xl overflow-hidden border border-white/6 shadow-2xl bg-gradient-to-b from-slate-900 to-slate-800">
+            <video class="w-full h-64 md:h-80 lg:h-96 object-cover" autoplay muted loop playsinline preload="metadata" poster="assets/other/preview.jpg" aria-label="Preview video">
+              <source src="assets/other/preview.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <div class="absolute left-5 top-5 rounded-full px-3 py-1 text-xs bg-black/30 border border-white/6 text-amber-200 font-semibold">LIVE • $1.2M</div>
+
+            
+          </div>
+
+          <!-- Pricing details card -->
+          <div id="pricing" class="rounded-2xl elite-panel p-5 md:p-6 border border-white/6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <div class="text-sm text-slate-300">Account</div>
+                <div class="text-2xl md:text-3xl font-extrabold">$1,200,000 USD</div>
+                <div class="mt-1 text-sm text-slate-400">Instant live account • Payout after first trade</div>
+              </div>
+
+              <div class="flex-shrink-0">
+                <div class="rounded-lg p-3 bg-gradient-to-tr from-black/10 to-black/6 border border-white/6 w-40 text-center">
+                  <div class="text-xs text-slate-300">Profit Split</div>
+                  <div class="text-2xl font-bold text-amber-200">Up to 85%</div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-300">
+              <li class="flex items-start gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Profit Target: <span class="text-white font-semibold ml-1">Not Required</span></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Max Daily Loss: <span class="text-white font-semibold ml-1">8%</span></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Max Overall Loss: <span class="text-white font-semibold ml-1">20%</span></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Equity Based Drawdown • No Consistency Rules</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Minimum Days: <span class="text-white font-semibold ml-1">None</span></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Payout Cycle: After 1st Trade</span>
+              </li>
+            </ul>
+
+            <div class="mt-6 flex items-center justify-between gap-4">
+              <div class="text-sm text-slate-300">
+  One-time fee <br>
+  Original Price: <span class="line-through">$7,482</span>
+</div>
+              <div class="text-right">
+                <div class="text-xs text-slate-400">Pay now</div>
+                <div class="text-3xl font-extrabold headline-gradient">$329</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verifieds carousel -->
+        
+        </div>
+      </div>
+
+      <!-- hidden accessible specs anchor -->
+      <div id="specs" class="sr-only" aria-hidden>
+        <p>Full specs. Price: $329. Funding: $1,200,000. Offer ends September 14, 2025 (23:59 SAST).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT: Countdown + Carousel -->
+  <script>
+    (function(){
+      // Target: Sept 14, 2025 23:59:59 SAST (UTC+02:00)
+      const targetISO = '2025-09-14T23:59:59+02:00';
+      const target = new Date(targetISO).getTime();
+
+      const daysEl = document.getElementById('cd-days');
+      const hoursEl = document.getElementById('cd-hours');
+      const minsEl = document.getElementById('cd-mins');
+      const secsEl = document.getElementById('cd-secs');
+      const announcer = document.getElementById('cd-announcer');
+
+      const pad = (n)=> String(n).padStart(2,'0');
+      let last = {d:null,h:null,m:null,s:null};
+
+      function animateUpdate(el, value, key){
+        if (last[key] === value) return;
+        last[key] = value;
+        el.classList.add('digit-pop');
+        // change text on next frame for smoothness
+        requestAnimationFrame(()=> {
+          el.textContent = pad(value);
+          // force reflow
+          void el.offsetWidth;
+          setTimeout(()=> el.classList.remove('digit-pop'), 380);
+        });
+      }
+
+      function tick(){
+        const now = Date.now();
+        const diff = Math.max(0, target - now);
+        const s = Math.floor(diff/1000)%60;
+        const m = Math.floor(diff/1000/60)%60;
+        const h = Math.floor(diff/1000/3600)%24;
+        const d = Math.floor(diff/1000/3600/24);
+
+        if (d !== last.d || h !== last.h || m !== last.m) {
+          announcer.textContent = `Time remaining: ${d} days, ${h} hours, ${m} minutes. Offer closes September 14, 2025.`;
+        }
+
+        animateUpdate(daysEl, d, 'd');
+        animateUpdate(hoursEl, h, 'h');
+        animateUpdate(minsEl, m, 'm');
+        animateUpdate(secsEl, s, 's');
+
+        if (diff <= 0) {
+          clearInterval(intervalId);
+          announcer.textContent = 'Offer ended.';
+          document.querySelectorAll('a[href^="#purchase"], .cta-100').forEach(el => {
+            el.setAttribute('aria-disabled','true');
+            el.classList.add('opacity-40','pointer-events-none');
+          });
+        }
+      }
+
+      tick();
+      const intervalId = setInterval(tick, 1000);
+
+      // VerifiedS CAROUSEL
+      const track = document.getElementById('cert-track');
+      const items = Array.from(track.children);
+      const prevBtn = document.getElementById('cert-prev');
+      const nextBtn = document.getElementById('cert-next');
+      const total = items.length;
+      let idx = 0, autoTimer=null;
+
+      function calcPosition(index){
+        const gap = 16; // CSS gap
+        const itemWidth = items[0].getBoundingClientRect().width;
+        const containerWidth = track.parentElement.getBoundingClientRect().width;
+        const offset = (containerWidth/2) - (itemWidth/2) - (index * (itemWidth + gap));
+        return offset;
+      }
+
+      function applyTransforms(index, animate=true){
+        if (!animate) track.style.transition = 'none'; else track.style.transition = 'transform .68s cubic-bezier(.2,.9,.3,1)';
+        track.style.transform = `translateX(${calcPosition(index)}px)`;
+        items.forEach((it,i)=>{
+          const dist = Math.abs(i - index);
+          const scale = Math.max(0.78, 1 - (dist * 0.12));
+          const rot = Math.min(9, dist * 4) * (i < index ? 1 : -1);
+          const opacity = dist > 3 ? 0.14 : 1 - (dist * 0.18);
+          it.style.transform = `perspective(900px) rotateY(${rot}deg) scale(${scale})`;
+          it.style.opacity = opacity;
+          it.style.filter = dist > 2 ? 'grayscale(0.35) blur(0.2px)' : 'none';
+        });
+      }
+
+      function goto(n){
+        idx = ((n % total) + total) % total;
+        applyTransforms(idx, true);
+      }
+
+      function next(){ goto(idx+1); }
+      function prev(){ goto(idx-1); }
+
+      nextBtn.addEventListener('click', ()=>{ next(); pauseAuto(); });
+      prevBtn.addEventListener('click', ()=>{ prev(); pauseAuto(); });
+
+      // hover to center
+      items.forEach((it,i)=>{
+        it.addEventListener('mouseenter', ()=>{ goto(i); pauseAuto(); });
+      });
+
+      // autoplay
+      function startAuto(){
+        stopAuto();
+        autoTimer = setInterval(()=> next(), 3000);
+      }
+      function stopAuto(){ if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+      function pauseAuto(){ stopAuto(); setTimeout(()=> startAuto(), 7000); }
+
+      window.addEventListener('load', ()=>{ // ensure sizes available
+        // enforce jpg extension fallback if raw names used
+        items.forEach(img=>{
+          if (img.tagName.toLowerCase() === 'img' && !/\.(jpe?g|png|webp|avif)$/i.test(img.src)) {
+            img.src = img.src + '.jpg';
+          }
+        });
+        goto(0);
+        startAuto();
+      });
+
+      window.addEventListener('resize', ()=> {
+        // recompute pos after resize debounce
+        clearTimeout(window._cert_resize);
+        window._cert_resize = setTimeout(()=> applyTransforms(idx, false), 120);
+      });
+
+      // keyboard nav for accessibility
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === 'ArrowRight') { next(); pauseAuto(); }
+        if (e.key === 'ArrowLeft') { prev(); pauseAuto(); }
+      });
+
+      // Respect reduced motion: disable transitions if requested
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.cert-item, .digit').forEach(n => n.style.transition = 'none');
+      }
+    })();
+  </script>
+</body>
+</html>
